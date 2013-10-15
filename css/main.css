@@ -1,7 +1,36 @@
+body{
+  width: 640px;
+  height: 960px;
+  font-size: 16px;
+}
+
+.centrado_horizontal {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+nav {
+  background: url('../img/logo.png') no-repeat center;
+	background-size: 230px 81px;
+  height: 5em;
+  width: 100%;
+}
+
+#shopping {
+  background: url('../img/carrito.png') no-repeat center;
+  float: right;
+  height: 55px;
+  margin: 1em 2em auto auto;
+  width: 117px;
+}
+
 #titulo_nav{ }
+
 #titulo_nav img{
   display: inline-block;
 }
+
 #titulo_nav nav{
   display: inline-block;
 }

@@ -1,0 +1,40 @@
+
+article{
+  margin: auto 3.5em;
+}
+
+article div{
+  margin: 1em 4em;
+}
+
+article div label{
+  display: inline-block;
+  width: 5em;
+}
+
+article div input{
+  border-radius: 0.5em;
+  border:solid 2px #BFBDBD;
+  display: inline-block;
+  width: 17em;
+}
+
+#boton_aceptar {
+  text-decoration: none;
+  padding: 1.8em 3em;
+  border: 2px solid #BFBDBD;
+}
+
+.centrado_horizontal a:link {color:#000000;}   
+.centrado_horizontal a:visited {color:#000000;} 
+.centrado_horizontal a:hover {color:#000000;}
+.centrado_horizontal a:active {color:#000000;} 
+
+header{
+  text-align: center;
+  margin-top: 3em;
+}
+
+#instrucciones {
+  margin: 2em auto;
+}
