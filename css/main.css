@@ -116,8 +116,6 @@ nav {
 }
 .detalles ul{
   height: 100%;
-}
-.detalles li{
   list-style: none;
 }
 
@@ -152,7 +150,7 @@ h3 {
   text-align: center;
 }
 
-#telefono{
+#img_telefono{
   margin: auto auto auto 1em;
   width: 524px;
 }
@@ -167,4 +165,141 @@ h3 {
   background: url('../img/btn_envia_mensaje.png') no-repeat center;
   height: 90px;
   width: 290px;
+}
+
+/* eventos */
+
+#menu_eventos{
+  background: url('../img/eventos.png') no-repeat center;
+  height: 842px;
+  margin: auto;
+  width: 576px;
+}
+
+#menu_eventos ul{
+  list-style: none;
+}
+
+#btn_alcohol{
+  background: url('../img/eventos/btn_alcohol.png') no-repeat center;
+  height: 62px;
+  width: 224px;
+  position: absolute;
+  top: 568px;
+  left: 84px;
+}
+
+#btn_bebidas{
+  background: url('../img/eventos/btn_bebidas.png') no-repeat center;
+  height: 62px;
+  width: 226px;
+  position: absolute;
+  top: 628px;
+  left: 330px;
+}
+
+#btn_produccion{
+  background: url('../img/eventos/btn_produccion.png') no-repeat center;
+  height: 62px;
+  width: 226px;
+  position: absolute;
+  top: 686px;
+  left: 84px;
+}
+
+#btn_comida{
+  background: url('../img/eventos/btn_comida.png') no-repeat center;
+  height: 62px;
+  width: 226px;
+  position: absolute;
+  top: 748px;
+  left: 330px;
+}
+
+/* eventos_alcohol */
+
+.article_eventos{
+  padding-top: 3em;
+}
+
+.article_eventos ul{
+  list-style: none;
+}
+
+#eventos_alcohol{
+  background: url('../img/eventos/fondo_alcohol.png') no-repeat center;
+  background-size: 286px 884px;
+  background-position: 0 0;
+  height: 884px;
+  margin: auto;
+}
+
+.article_eventos li a {
+  text-decoration: none;
+}
+
+.article_eventos li.alcohol a:link {color:black;}      /* unvisited link */
+.article_eventos li.alcohol a:visited {color:black;}  /* visited link */
+.article_eventos li.alcohol a:hover {color:black;}  /* mouse over link */
+.article_eventos li.alcohol a:active {color:black;}  /* selected link */
+
+.article_eventos li.alcohol {
+  background: url('../img/eventos/li_bebidas.png') no-repeat top left; 
+  padding-left: 120px;
+  height: 50px;
+  margin: 0.5em auto auto 6em;
+}
+
+/* eventos bebidas */
+
+#eventos_bebidas {
+  background: url('../img/eventos/fondo_bebidas.png') no-repeat center;
+  background-size: 142px 752px;
+  background-position: 0 140px;
+  height: 884px;
+  margin: auto;
+}
+
+/* eventos producción */
+
+#eventos_produccion {
+  background: url('../img/eventos/fondo_produccion.png') no-repeat center;
+  background-size: 254px 774px;
+  background-position: 0 100px;
+  height: 884px;
+  margin: auto;
+}
+
+.article_eventos li.produccion a:link {color:black;}      /* unvisited link */
+.article_eventos li.produccion a:visited {color:black;}  /* visited link */
+.article_eventos li.produccion a:hover {color:black;}  /* mouse over link */
+.article_eventos li.produccion a:active {color:black;}  /* selected link */
+
+.article_eventos li.produccion {
+  background: url('../img/eventos/li_produccion.png') no-repeat top left; 
+  padding-left: 60px;
+  height: 50px;
+  margin: 0.5em auto auto 8em;
+}
+
+/* eventos comida */
+
+#eventos_comida {
+  background: url('../img/eventos/fondo_comida.png') no-repeat center;
+  background-size: 338px 794px;
+  background-position: 0 50px;
+  height: 884px;
+  margin: auto;
+}
+
+.article_eventos li.comida a:link {color:black;}      /* unvisited link */
+.article_eventos li.comida a:visited {color:black;}  /* visited link */
+.article_eventos li.comida a:hover {color:black;}  /* mouse over link */
+.article_eventos li.comida a:active {color:black;}  /* selected link */
+
+.article_eventos li.comida {
+  background: url('../img/eventos/li_comida.png') no-repeat top left; 
+  padding-left: 140px;
+  height: 50px;
+  margin: 0.5em auto auto 5em;
 }
