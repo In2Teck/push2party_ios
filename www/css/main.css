@@ -1,0 +1,467 @@
+@font-face{
+  font-family: 'Labtop';
+  src: url('../fonts/LABTOP__.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#back {
+  background: url('../img/back.png') no-repeat center;
+  float: left;
+  height: 55px;
+  margin: 0.5em auto auto 0.5em;
+  width: 117px;
+}
+
+.ui-body-c, .ui-overlay-c { background:#FFF; }
+.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
+    font-family: 'Labtop';
+}
+
+body{
+  font-family: 'Labtop';
+  font-size: 30px;
+  height: 960px;
+  width: 640px;
+  margin-top: 1.5em;
+}
+
+.centrado_horizontal {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+nav {
+  background: url('../img/logo.png') no-repeat center;
+  background-size: 230px 81px;
+  height: 2.5em;
+  width: 100%;
+}
+
+#btn_paquetes{
+    background: url('../img/btn_paquetes.png') no-repeat center;
+    background-size: 367px 137px;
+    height: 137px;
+    width: 367px;
+    position: absolute;
+    top: 168px;
+    left: 130px;
+}
+
+#btn_galeria{
+    background: url('../img/btn_galeria.png') no-repeat center;
+    background-size: 187px 349px;
+    height: 349px;
+    width: 187px;
+    position: absolute;
+    top: 228px;
+    left: 442px;
+}
+
+#btn_beneficios{
+    background: url('../img/btn_beneficios.png') no-repeat center;
+    background-size: 298px 249px;
+    height: 249px;
+    width: 298px;
+    position: absolute;
+    top: 544px;
+    left: 318px;
+}
+
+#btn_contacto{
+    background: url('../img/btn_contacto.png') no-repeat center;
+    background-size: 300px 246px;
+    height: 246px;
+    width: 300px;
+    position: absolute;
+    top: 548px;
+    left: 18px;
+}
+
+#btn_crea_evento{
+    background: url('../img/btn_crea_evento.png') no-repeat center;
+    background-size: 183px 347px;
+    height: 347px;
+    width: 183px;
+    position: absolute;
+    top: 230px;
+    left: 3px;
+}
+
+#btn_menu{
+    background: url('../img/btn_menu.png') no-repeat center;
+    background-size: 144px 144px;
+    height: 144px;
+    width: 144px;
+    position: absolute;
+    top: 402px;
+    left: 244px;
+}
+
+#shopping {
+  background: url('../img/carrito.png') no-repeat center;
+  float: right;
+  height: 55px;
+  margin: 0.5em 1em auto auto;
+  width: 117px;
+}
+
+#titulo_nav{ }
+
+#titulo_nav img {
+  display: inline-block;
+}
+
+#titulo_nav nav {
+  display: inline-block;
+}
+
+/*paquetes*/
+
+.btn_next{
+  background: url('../img/btn_next.png');
+  float: right;
+  height: 65px;
+  width: 76px;
+  position: relative;
+}
+
+.btn_prev{
+  background: url('../img/btn_prev.png');
+  float: left;
+  height: 65px;
+  width: 76px;
+  position: relative;
+}
+
+.btn_agregar{
+  background: url('../img/btn_agregar.png') no-repeat center;
+  height: 89px;
+  width: 194px;
+  float: right;
+  margin-top: 0.8em;
+}
+
+#paquete {
+    height: 800px;
+}
+#paquete a{
+  display: inline-block;
+}
+
+#paquete_1{
+  background: url('../img/paquete_1.png') no-repeat 50% 0%;
+  background-size: 632px 672px;
+}
+
+#paquete_2{
+  background: url('../img/paquete_2.png') no-repeat 50% 0%;
+  background-size: 632px 672px;
+}
+
+#paquete_3{
+  background: url('../img/paquete_3.png') no-repeat 50% 0%;
+  background-size: 632px 672px;
+}
+
+#paquete_4{
+  background: url('../img/paquete_4.png') no-repeat 50% 0%;
+  background-size: 632px 672px;
+}
+
+.elementos{
+    padding-top: 2em;
+    height: 490px;
+}
+
+.elementos_compress{
+    padding-top: 3.2em;
+    height: 450px;
+}
+
+.elementos_compress p{
+    font-size: .9em;
+    margin: 0;
+}
+
+.descripcion{
+  padding-right: 1em;
+  padding-left: 1em;
+  height: 100%;
+  margin-top: 4em;
+}
+
+.descripcion p, a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.paquete_id {
+  font-size: 1.5em;
+}
+
+.precio{
+  font-size: 1.2em;
+  color: #6A6A6A;
+  margin: 1.4em auto auto 2.5em;
+}
+
+.precio_compuesto{
+    font-size: 1em;
+    color: #6A6A6A;
+    margin: 1.1em auto auto 2.5em;
+}
+
+.detalles{
+  text-align: center;
+  margin-right: 1em;
+  height: 550px;
+  width: 640px;
+}
+
+.detalles ul{
+  height: 100%;
+  list-style: none;
+}
+
+/* galeria */
+
+h1 {
+  margin: .4em auto;
+  text-align: center;
+  width: 100%;
+}
+
+.h1 {
+  margin: .4em auto;
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
+}
+
+.lugar {
+  margin: 0.2em 2.3em;
+}
+
+.h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+h3 {
+  margin: 0;
+}
+
+.h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+/* beneficios */
+.subtitle {
+  margin: auto 2.3em 0.5em;
+}
+
+.promociones {}
+.promociones img {
+  width: 310px;
+}
+
+/* contacto */
+#contacto{
+  text-align: center;
+}
+
+#img_telefono{
+  margin: auto auto auto 1em;
+  width: 524px;
+}
+
+.btn_llamar{
+  background: url('../img/btn_llamar.png') no-repeat center;
+  height: 94px;
+  width: 206px;
+}
+
+.btn_envia_mensaje{
+  background: url('../img/btn_envia_mensaje.png') no-repeat center;
+  height: 90px;
+  width: 290px;
+}
+
+/* eventos */
+
+#menu_eventos{
+  background: url('../img/eventos.png') no-repeat center;
+  height: 822px;
+  margin: auto;
+  width: 576px;
+}
+
+#menu_eventos ul{
+  list-style: none;
+}
+
+#btn_alcohol{
+  background: url('../img/eventos/btn_alcohol.png') no-repeat center;
+  height: 62px;
+  width: 224px;
+  position: absolute;
+  top: 608px;
+  left: 84px;
+}
+
+#btn_bebidas{
+  background: url('../img/eventos/btn_bebidas.png') no-repeat center;
+  height: 62px;
+  width: 226px;
+  position: absolute;
+  top: 668px;
+  left: 330px;
+}
+
+#btn_produccion{
+  background: url('../img/eventos/btn_produccion.png') no-repeat center;
+  height: 62px;
+  width: 226px;
+  position: absolute;
+  top: 726px;
+  left: 84px;
+}
+
+#btn_comida{
+  background: url('../img/eventos/btn_comida.png') no-repeat center;
+  height: 62px;
+  width: 226px;
+  position: absolute;
+  top: 788px;
+  left: 330px;
+}
+
+/* eventos_alcohol */
+
+.article_eventos{
+  padding-top: 3em;
+}
+
+.article_eventos ul{
+  list-style: none;
+}
+
+#eventos_alcohol{
+  background: url('../img/eventos/fondo_alcohol.png') no-repeat center;
+  background-size: 286px 884px;
+  background-position: 0 0;
+  height: 884px;
+  margin: auto;
+}
+
+.article_eventos li a {
+  text-decoration: none;
+}
+
+.article_eventos li.alcohol a:link {color:black;}      /* unvisited link */
+.article_eventos li.alcohol a:visited {color:black;}  /* visited link */
+.article_eventos li.alcohol a:hover {color:black;}  /* mouse over link */
+.article_eventos li.alcohol a:active {color:black;}  /* selected link */
+
+.article_eventos li.alcohol {
+  background: url('../img/eventos/li_bebidas.png') no-repeat top left; 
+  padding-left: 120px;
+  height: 50px;
+  margin: 0.5em auto auto 6em;
+}
+
+/* eventos bebidas */
+
+#eventos_bebidas {
+  background: url('../img/eventos/fondo_bebidas.png') no-repeat center;
+  background-size: 142px 752px;
+  background-position: 0 140px;
+  height: 884px;
+  margin: auto;
+}
+
+/* eventos producción */
+
+#eventos_produccion {
+  background: url('../img/eventos/fondo_produccion.png') no-repeat center;
+  background-size: 254px 774px;
+  background-position: 0 100px;
+  height: 884px;
+  margin: auto;
+}
+
+.article_eventos li.produccion a:link {color:black;}      /* unvisited link */
+.article_eventos li.produccion a:visited {color:black;}  /* visited link */
+.article_eventos li.produccion a:hover {color:black;}  /* mouse over link */
+.article_eventos li.produccion a:active {color:black;}  /* selected link */
+
+.article_eventos li.produccion {
+  background: url('../img/eventos/li_produccion.png') no-repeat top left; 
+  padding-left: 60px;
+  height: 50px;
+  margin: 0.5em auto auto 8em;
+}
+
+/* eventos comida */
+
+#eventos_comida {
+  background: url('../img/eventos/fondo_comida.png') no-repeat center;
+  background-size: 338px 794px;
+  background-position: 0 50px;
+  height: 884px;
+  margin: auto;
+}
+
+.article_eventos li.comida a:link {color:black;}      /* unvisited link */
+.article_eventos li.comida a:visited {color:black;}  /* visited link */
+.article_eventos li.comida a:hover {color:black;}  /* mouse over link */
+.article_eventos li.comida a:active {color:black;}  /* selected link */
+
+.article_eventos li.comida {
+  background: url('../img/eventos/li_comida.png') no-repeat top left; 
+  padding-left: 140px;
+  height: 50px;
+  margin: 0.5em auto auto 5em;
+}
+
+/* desglose */
+#cotizacion{
+  margin: auto;
+  width: 100%;
+}
+
+#cotizacion .h2{
+  display: inline-block;
+}
+#cotizacion div{
+  display: inline-block;
+}
+
+#articulos{
+    margin-left: 4em;
+}
+
+#cantidad{
+    text-align: center;
+}
+
+/* menu */
+
+#menu{
+  background: url('../img/rueda.png') no-repeat center;
+  height: 700px;
+  margin: auto;
+  width: 634px;
+}
+
+#selected_label{
+    font-size: 2em;
+    text-align: center;
+}
+
+#selected_label p {
+    margin-top: 0.5em;
+}
