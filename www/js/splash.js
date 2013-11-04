@@ -16,6 +16,7 @@ function addUser(){
             mail: $("#telefono")[0].value
         }
         setCache("user", user);
+        window.location.href = 'menu.html';
     } else {
         showMessage("Favor de introducir todos los datos");
     }

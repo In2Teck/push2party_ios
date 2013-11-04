@@ -1,47 +1,60 @@
-var link;
+var PAQUETES_RANGE_1 = 10; var PAQUETES_RANGE_2 = 91;
+var GALERIA_RANGE_1 = 71; var GALERIA_RANGE_2 = 90;
+var BENEFICIOS_RANGE_1 = 51; var BENEFICIOS_RANGE_2 = 70;
+var CONTACTO_RANGE_1 = 31; var CONTACTO_RANGE_2 = 50;
+var EVENTOS_RANGE_1 = 11; var EVENTOS_RANGE_2 = 30;
 
 $(document).on('ready', init);
 
 function init() {
-    $("#btn_menu").on('click', btnMenu);
-    $("#btn_crea_evento").on('click', btnEventos);
-    $("#btn_galeria").on('click', btnGaleria);
-    $("#btn_beneficios").on('click', btnBeneficios);
-    $("#btn_paquetes").on('click', btnPaquetes);
-    $("#btn_contacto").on('click', btnContacto);
-    displayMenuLabel("");
-    link = "";
+    goPaquetes();
+    $(".dial").knob({
+        'displayInput': false,
+        'width': "620",
+        'height': "620",
+        'thickness': "0.72",
+        'fgColor': "none",
+        'bgColor': "none",
+        'change' : function (v) {
+            $("#menu_img")[0].style.WebkitTransform = "rotate("+v*3.6+"deg)";
+            if ( (v <= PAQUETES_RANGE_1 && v >= 0) || (v >= PAQUETES_RANGE_2 && v <= 100) ){
+              goPaquetes();
+            } else if (v <= GALERIA_RANGE_2 && v >= GALERIA_RANGE_1){
+              goGaleria();
+            } else if (v <= BENEFICIOS_RANGE_2 && v >= BENEFICIOS_RANGE_1){
+              goBeneficios();
+            } else if (v <= CONTACTO_RANGE_2 && v >= CONTACTO_RANGE_1 ){
+              goContacto();
+            } else if (v <= EVENTOS_RANGE_2 && v >= EVENTOS_RANGE_1){
+              goEventos();
+            }
+        }
+    });
 }
 
-function btnMenu(){
-    if (link != ""){
-        window.location.href = './' + link;
-    }
-}
-
-function btnEventos(){
+function goEventos(){
     displayMenuLabel("CREA TU EVENTO");
-    link = "eventos.html";
+    $("#btn_menu")[0].href = "eventos.html";
 }
 
-function btnGaleria(){
+function goGaleria(){
     displayMenuLabel("GALERIA");
-    link = "galeria.html";
+    $("#btn_menu")[0].href = "galeria.html";
 }
 
-function btnBeneficios(){
+function goBeneficios(){
     displayMenuLabel("BENEFICIOS");
-    link = "beneficios.html";
+    $("#btn_menu")[0].href = "beneficios.html";
 }
 
-function btnPaquetes(){
+function goPaquetes(){
     displayMenuLabel("PAQUETES");
-    link = "paquetes.html";
+    $("#btn_menu")[0].href = "paquetes.html";
 }
 
-function btnContacto(){
+function goContacto(){
     displayMenuLabel("CONTACTO");
-    link = "contacto.html";
+    $("#btn_menu")[0].href = "contacto.html";
 }
 
 function displayMenuLabel(label){
