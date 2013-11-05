@@ -76,5 +76,89 @@ function showAlert(message, title, button, callback) {
 
 function showMessage(message){
     showAlert(message," ","Ok", null);
+}
+
+function requestService(url, type, data, success, fail){
+
+    $.ajax({
+       url: url,
+       type: type,
+       data: data,
+       timeout: 30000,
+       success: success,
+       fail: fail
+    });
+}
+
+function modalDialogue(title, itemArray, options){
+    
+    if (options == null) {
+        options = {};
+    }
+    //options["closeClass"] = "dialogueClass";
+    options["minHeight"] = 300 + itemArray.length*50;
+    options["minWidth"] = 400;
+    $("#modal-title")[0].innerHTML = title;
+    $("#modal-content").empty();
+    $("#modal-content").append("<br/><table>");
+    $.each(itemArray, function(value, key){
+           $("#modal-content").append("<tr><td id='"+key.id+"' class='items'>"+key.name+"</td><td class='numbers'><input id='"+ key.id+ "_spinner' value=0 size=2 maxlength=2 /></td></tr>");
+           $("#"+key.id+"_spinner").spinner({
+             max: 9,
+             min: 0
+           });
+    });
+    $("#modal-content").append("</table>");
+    $("#modal-content").append("<br/><p style='text-align: center;'><a href='#' class='btn_aceptar_item' id='" + title.replace(/ /g,'') + "'></a></p>");
+    $("#"+title.replace(/ /g,'')).on('click', function(){
+                    $('#shopping').css("background-image", "url('img/carrito_seleccionado.png')");
+                    setTimeout(function(){
+                      $.modal.close();
+                      $('#shopping').css("background-image", "url('img/carrito.png')");
+                    }, 200);
+                    
+    });
+    //$("#modal-alert").css("height", "600px");
+    $("#modal-alert").modal(options);
+    $(".simplemodal-wrap").css("overflow","");
+}
+
+function messageDialogue(title, options){
+    
+    if (options == null) {
+        options = {};
+    }
+    //options["closeClass"] = "dialogueClass";
+    options["minHeight"] = 460;
+    options["minWidth"] = 400;
+    $("#modal-title")[0].innerHTML = title;
+    $("#modal-content").empty();
+    $("#modal-content").append("<textarea rows=5 cols=22 class='textarea'></textarea>");
+    $("#modal-content").append("<br/><br/><p style='text-align: center;'><a href='#' class='btn_enviar' id='btn_enviar'></a></p>");
+    $("#btn_enviar").on('click', function(){
+      $.modal.close();
+    });
+    $("#modal-alert").modal(options);
+    $(".simplemodal-wrap").css("overflow","");
+    
+}
+
+function contactDialogue(title, options){
+    
+    if (options == null) {
+        options = {};
+    }
+    //options["closeClass"] = "dialogueClass";
+    options["minHeight"] = 500;
+    options["minWidth"] = 400;
+    $("#modal-title")[0].innerHTML = title;
+    $("#modal-content").empty();
+    $("#modal-content").append("<textarea rows=5 cols=22 class='textarea'></textarea>");
+    $("#modal-content").append("<br/><br/><p style='text-align: center;'><a href='#' class='btn_enviar' id='btn_enviar'></a></p>");
+    $("#btn_enviar").on('click', function(){
+                        $.modal.close();
+                        });
+    $("#modal-alert").modal(options);
+    $(".simplemodal-wrap").css("overflow","");
     
 }

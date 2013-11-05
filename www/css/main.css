@@ -230,7 +230,38 @@ h3 {
   width: 290px;
 }
 
+.btn_enviar{
+  background: url('../img/btn_enviar.png') no-repeat center;
+  height: 60px;
+  width: 122px;
+}
+
+.textarea {
+  border-radius: 10px;
+  outline: none;
+}
+
 /* eventos */
+
+.cantidad{
+    text-align: right;
+    margin-right: 1em;
+}
+
+.items {
+    width: 12em;
+}
+
+.numbers {
+    width: 5em;
+    font-size: .8em;
+}
+
+.btn_aceptar_item{
+  background: url('../img/btn_aceptar_item.png') no-repeat center;
+  height: 59px;
+  width: 121px;
+}
 
 #menu_eventos{
   background: url('../img/eventos.png') no-repeat center;
@@ -297,14 +328,14 @@ h3 {
   margin: auto;
 }
 
-.article_eventos li a {
+.article_eventos a {
   text-decoration: none;
 }
 
-.article_eventos li.alcohol a:link {color:black;}      /* unvisited link */
-.article_eventos li.alcohol a:visited {color:black;}  /* visited link */
-.article_eventos li.alcohol a:hover {color:black;}  /* mouse over link */
-.article_eventos li.alcohol a:active {color:black;}  /* selected link */
+.article_eventos a:link {color:black;}      /* unvisited link */
+.article_eventos a:visited {color:black;}  /* visited link */
+.article_eventos a:hover {color:black;}  /* mouse over link */
+.article_eventos a:active {color:black;}  /* selected link */
 
 .article_eventos li.alcohol {
   background: url('../img/eventos/li_bebidas.png') no-repeat top left; 
@@ -333,15 +364,10 @@ h3 {
   margin: auto;
 }
 
-.article_eventos li.produccion a:link {color:black;}      /* unvisited link */
-.article_eventos li.produccion a:visited {color:black;}  /* visited link */
-.article_eventos li.produccion a:hover {color:black;}  /* mouse over link */
-.article_eventos li.produccion a:active {color:black;}  /* selected link */
-
 .article_eventos li.produccion {
   background: url('../img/eventos/li_produccion.png') no-repeat top left; 
   padding-left: 60px;
-  height: 50px;
+  height: 35px;
   margin: 0.5em auto auto 8em;
 }
 
@@ -354,11 +380,6 @@ h3 {
   height: 884px;
   margin: auto;
 }
-
-.article_eventos li.comida a:link {color:black;}      /* unvisited link */
-.article_eventos li.comida a:visited {color:black;}  /* visited link */
-.article_eventos li.comida a:hover {color:black;}  /* mouse over link */
-.article_eventos li.comida a:active {color:black;}  /* selected link */
 
 .article_eventos li.comida {
   background: url('../img/eventos/li_comida.png') no-repeat top left; 
@@ -386,6 +407,12 @@ h3 {
 
 #cantidad{
     text-align: center;
+}
+
+.btn_confirmar{
+  background: url('../img/btn_confirmar.png') no-repeat center;
+  height: 65px;
+  width: 132px;
 }
 
 /* menu */
@@ -422,3 +449,36 @@ h3 {
     left: 243px;
     z-index: 10;
 }
+
+/* for modal */
+#modal-alert {
+  display: none;
+  overflow: auto;
+}
+
+#modal-content div {
+  background-color: rgba(3,3,3,0.3);
+  height: 10%;
+  margin: 0.5em auto;
+  width: 70%;
+}
+
+#modal-content div a {
+  color: #b09648;
+  margin: 0.5em 1em;
+  text-decoration: none;
+}
+
+#simplemodal-overlay {background-color:#111;}
+
+#simplemodal-container {height:160px; width:200px; color:#111; background-color:#FFF; border:2px solid #444; padding:1em; font-weight: normal; border-radius: 10px;}
+#simplemodal-container .simplemodal-data {padding: 0;}
+#simplemodal-container code {background:#111; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:1em; margin-bottom:1em; padding:0.5em 0.5em 0.5em;}
+#simplemodal-container a {color:#111;}
+#simplemodal-container a.modalCloseImg {background:url("../img/tache_min.png") no-repeat; width:30px; height:40px; z-index:3200; position:absolute; top: 10px; right:2px; cursor:pointer;}
+#simplemodal-container p {margin: 0;}
+#simplemodal-container.h1 {color:#111; margin: 0; font-size: 2em;}
+
+.dialogueClass{display: none;}
+
+.closeClass{display: inline;}

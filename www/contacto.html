@@ -12,7 +12,9 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <script src="js/modernizr.min.js"></script>
+    <script type="text/javascript" src="js/jquery.simplemodal.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/contacto.js"></script>
   </head>
     <body>
       <header>
@@ -27,8 +29,13 @@
         <article id="contacto">
           <p class="h1">CONTACTO</p>
           <img src="img/telefono.jpg" alt="telefono" id="img_telefono"/>
-          <p><a href="#" class="btn_llamar"></a></p>
-          <p><a href="#" class="btn_envia_mensaje"></a></p>
+          <p><a href="tel:528187272789" class="btn_llamar"></a></p>
+          <p><a href="#" class="btn_envia_mensaje" id="envia_mensaje"></a></p>
+          <div id="modal-alert">
+              <p class="h3 centrado_horizontal" id="modal-title"></p>
+              <br/>
+              <p id="modal-content"></p>
+          </div>
         </article>
       </section>
     </body>
