@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var HOST = "http://push2party.herokuapp.com/";
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -57,6 +60,7 @@ function getCache(key) {
     return JSON.parse(window.localStorage.getItem(key));
 }
 
+
 function isCache(key) {
     return window.localStorage.getItem(key) !== null && window.localStorage.getItem(key) !== undefined;
 }
@@ -78,6 +82,15 @@ function showMessage(message){
     showAlert(message," ","Ok", null);
 }
 
+function showConfirm(message, title, callback, labels) {
+    navigator.notification.confirm(
+                                   message,  // message
+                                   callback,// callback to invoke with index of button pressed
+                                   title,    // title
+                                   labels    // buttonLabels
+                                   );
+}
+
 function requestService(url, type, data, success, fail){
 
     $.ajax({
@@ -90,6 +103,41 @@ function requestService(url, type, data, success, fail){
     });
 }
 
+function getOrInitShoppingVar(){
+    if (isCache("shopping")){
+        return getCache("shopping");
+    } else {
+        setCache("shopping", {
+                 items: {},
+                 paquetes: {}
+                 });
+        return getCache("shopping");
+    }
+}
+
+function resetShoppingVar(){
+    setCache("shopping", {
+             items: {},
+             paquetes: {}
+    });
+}
+
+function initOrGetValue(object, key, price, description){
+    var shopping = getOrInitShoppingVar();
+    if (shopping[object][key] == undefined){
+        shopping[object][key] = {quantity: 0, price: price, description: description};
+        setCache("shopping", shopping);
+    }
+    
+    return shopping[object][key];
+}
+
+function setQuantityValue(object, key, value){
+    var shopping = getOrInitShoppingVar();
+    shopping[object][key]["quantity"] = value;
+    setCache("shopping", shopping);
+}
+
 function modalDialogue(title, itemArray, options){
     
     if (options == null) {
@@ -97,20 +145,25 @@ function modalDialogue(title, itemArray, options){
     }
     //options["closeClass"] = "dialogueClass";
     options["minHeight"] = 300 + itemArray.length*50;
-    options["minWidth"] = 400;
+    options["minWidth"] = 450;
     $("#modal-title")[0].innerHTML = title;
     $("#modal-content").empty();
     $("#modal-content").append("<br/><table>");
     $.each(itemArray, function(value, key){
-           $("#modal-content").append("<tr><td id='"+key.id+"' class='items'>"+key.name+"</td><td class='numbers'><input id='"+ key.id+ "_spinner' value=0 size=2 maxlength=2 /></td></tr>");
+           var value = initOrGetValue("items", key.id, key.price, key.description);
+           $("#modal-content").append("<tr><td id='"+key.id+"' class='items'>"+key.name+"</td><td class='numbers'><input readonly id='"+ key.id+ "_spinner' value="+ value.quantity +" size=2 maxlength=2 /></td></tr>");
            $("#"+key.id+"_spinner").spinner({
-             max: 9,
-             min: 0
+             max: 99,
+             min: 0,
+             icons: { up: "none", down: "none" }
            });
     });
     $("#modal-content").append("</table>");
     $("#modal-content").append("<br/><p style='text-align: center;'><a href='#' class='btn_aceptar_item' id='" + title.replace(/ /g,'') + "'></a></p>");
     $("#"+title.replace(/ /g,'')).on('click', function(){
+                    $.each(itemArray, function(value, key){
+                        setQuantityValue("items", key.id, $("#"+key.id+"_spinner")[0].value);
+                    });
                     $('#shopping').css("background-image", "url('img/carrito_seleccionado.png')");
                     setTimeout(function(){
                       $.modal.close();

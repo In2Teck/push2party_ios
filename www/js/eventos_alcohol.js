@@ -1,8 +1,9 @@
 $(document).on('ready', init);
 
 function init() {
-    requestService("http://push2party.herokuapp.com/items/by_parent_id_with_children.json", "GET", {parent_id: 1}, success, fail);
+    requestService(HOST + "items/by_parent_id_with_children.json", "GET", {parent_id: 1}, success, fail);
 }
+
 
 function success(data){
     $.each( data, function( i, item ) {

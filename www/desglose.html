@@ -20,7 +20,7 @@
         <header>
             <div id="titulo_nav" data-role="header" data-theme="c" class="ui-header ui-bar-c" role="banner">
                 <nav>
-                    <a href="menu.html" id="back"></a>
+                    <a href="javascript:history.back(1)" id="back"></a>
                 </nav>
             </div> 
         </header>
@@ -30,25 +30,16 @@
             <p class="h1">COTIZACION</p>
             <br/>
             <div id="articulos">
-              <p class="h2">PRODUCTO</p>
-              <p>Paquete 1</p> 
-              <p>Dance Floor</p> 
-              <p>Pared LED</p> 
-              <p>Mesas de bar iluminadas con 4 bancos</p> 
-              <p>Rocola</p> 
+              <p class="h2 col">PRODUCTO</p>
             </div>
             <div id="cantidad">
               <p class="h2">CANTIDAD</p>
-              <p>1</p> 
-              <p>2</p> 
-              <p>1</p> 
-              <p>1</p> 
-              <p>1</p> 
             </div>
           </div>
           <br/>
-          <p style='text-align: center;'>
+          <p class="action_buttons">
             <a href='#' class='btn_confirmar' id='btn_confirmar'></a>
+            <a href='#' class='btn_borrar' id='btn_borrar'></a>
           </p>
         </article>
         <div id="modal-alert">
