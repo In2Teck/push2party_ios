@@ -32,6 +32,9 @@
 		5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
 		697E953D484C41D1A924D672 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E7939412624123AB6FDFDC /* CDVNotification.m */; };
+		84E2383AFA7749CD8F0B351D /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BF79F4CA4A104DADAAF13EA0 /* CDVConnection.m */; };
+		AF736F5C71D94E8983F8A708 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6844089E1A174546BD4DCC02 /* CDVReachability.m */; };
+		B5D4CD1D1E154D449880894B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89A9425EB154C73BD168362 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C7A5C0E018344FA3003548D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A5C0DF18344FA3003548D1 /* Images.xcassets */; };
 		C7A5C0E218355A0B003548D1 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A5C0E118355A0B003548D1 /* icon-29.png */; };
 		C7A5C0E818355C2B003548D1 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A5C0E718355C2B003548D1 /* icon-29@2x.png */; };
@@ -88,15 +91,20 @@
 		54793C5558844985B221F71B /* CDVVibration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVVibration.h; path = org.apache.cordova.vibration/CDVVibration.h; sourceTree = "<group>"; };
 		5AEE5B34173C68D80009041E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		6844089E1A174546BD4DCC02 /* CDVReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVReachability.m; path = "org.apache.cordova.network-information/CDVReachability.m"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Push2Party-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Push2Party-Info.plist"; path = "../Push2Party-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		B4222894FC954A6CB849640D /* CDVNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVNotification.h; path = org.apache.cordova.dialogs/CDVNotification.h; sourceTree = "<group>"; };
+		BA4A3DCED64B4FC7B48A2F41 /* CDVConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVConnection.h; path = "org.apache.cordova.network-information/CDVConnection.h"; sourceTree = "<group>"; };
+		BF79F4CA4A104DADAAF13EA0 /* CDVConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "org.apache.cordova.network-information/CDVConnection.m"; sourceTree = "<group>"; };
 		C7A5C0DF18344FA3003548D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Push2Party/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		C7A5C0E118355A0B003548D1 /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29.png"; sourceTree = "<group>"; };
 		C7A5C0E718355C2B003548D1 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		C7A5C0EB18355CC1003548D1 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
 		D085F9D063364421A1122496 /* AudioToolbox.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
+		DDBF6B06553242DE93E64096 /* CDVReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVReachability.h; path = "org.apache.cordova.network-information/CDVReachability.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Push2Party/config.xml; sourceTree = "<group>"; };
+		F89A9425EB154C73BD168362 /* SystemConfiguration.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
 				50A5CAE84FF245CAB50A4362 /* AudioToolbox.framework in Frameworks */,
+				B5D4CD1D1E154D449880894B /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +213,7 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
 				D085F9D063364421A1122496 /* AudioToolbox.framework */,
+				F89A9425EB154C73BD168362 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -223,6 +233,10 @@
 				B4222894FC954A6CB849640D /* CDVNotification.h */,
 				2CEEAF9F495940F88555748F /* CDVVibration.m */,
 				54793C5558844985B221F71B /* CDVVibration.h */,
+				BF79F4CA4A104DADAAF13EA0 /* CDVConnection.m */,
+				6844089E1A174546BD4DCC02 /* CDVReachability.m */,
+				BA4A3DCED64B4FC7B48A2F41 /* CDVConnection.h */,
+				DDBF6B06553242DE93E64096 /* CDVReachability.h */,
 			);
 			name = Plugins;
 			path = Push2Party/Plugins;
@@ -301,7 +315,7 @@
 				LastUpgradeCheck = 500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = TM892Z38C7;
+						DevelopmentTeam = U7443L5ZBL;
 					};
 				};
 			};
@@ -401,6 +415,8 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				697E953D484C41D1A924D672 /* CDVNotification.m in Sources */,
 				27964D21B12441E4BCF67AD7 /* CDVVibration.m in Sources */,
+				84E2383AFA7749CD8F0B351D /* CDVConnection.m in Sources */,
+				AF736F5C71D94E8983F8A708 /* CDVReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -483,7 +499,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Push2Party;
-				PROVISIONING_PROFILE = "0648682E-0AC4-4392-939B-A7824BC11ACF";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -493,10 +509,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Oscar  Crespo E (TM892Z38C7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oscar  Crespo E (TM892Z38C7)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -520,7 +536,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Push2Party;
-				PROVISIONING_PROFILE = "0648682E-0AC4-4392-939B-A7824BC11ACF";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

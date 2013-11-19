@@ -14,36 +14,23 @@
     <script src="js/prefixfree.min.js"></script>
     <script src="js/modernizr.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/splash.js"></script>
   </head>
+    <script>
+        $(document).on('ready', init);
+        
+        function init(){
+            requestService(HOST + "ping.json", "GET", null, null, null);
+            var isCachedUser = isCache("user");
+            setTimeout(function(){
+                if (isCachedUser){
+                    window.location.href = 'menu.html';
+                } else {
+                    window.location.href = 'splash.html';
+                }
+            }, 1500);
+        };
+    </script>
+    <img src="img/sponsor_1.png" alt="sponsor 1">
     <body>
-      <header>
-        <img src="img/texto_logo.png" alt="texto_logo"/>
-      </header>
-      <section>
-        <article>
-          <p id="instrucciones">Favor de ingresar correctamente la información en seguida ya que nos servirá para futura comunicación.</p>
-          <div>
-            <label>NOMBRE</label>
-            <input id="nombre"></input>
-          </div> 
-          <div>
-            <label>APELLIDO</label>
-            <input id="apellido"></input>
-          </div> 
-          <div>
-            <label>TELEFONO</label>
-            <input id="telefono"></input>
-          </div> 
-          <div>
-            <label>MAIL</label>
-            <input id="mail"></input>
-          </div> 
-          <br/>
-          <div class="centrado_horizontal">
-            <a href="#" id="boton_aceptar" >ACEPTAR</a>
-          </div>
-        </article>
-      </section>
     </body>
 </html>

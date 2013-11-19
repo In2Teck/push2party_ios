@@ -193,7 +193,6 @@ function messageDialogue(title, options){
     });
     $("#modal-alert").modal(options);
     $(".simplemodal-wrap").css("overflow","");
-    
 }
 
 function contactDialogue(title, options){
@@ -214,4 +213,10 @@ function contactDialogue(title, options){
     $("#modal-alert").modal(options);
     $(".simplemodal-wrap").css("overflow","");
     
+}
+
+function checkConnection(){
+    if (navigator.network.connection.type == Connection.NONE){
+        showMessage("Esta aplicación necesita conexión a internet para funcionar");
+    }
 }

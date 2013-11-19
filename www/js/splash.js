@@ -1,23 +1,60 @@
 $(document).on('ready', init);
 
 function init() {
-    if (isCache("user")){
-        window.location.href = 'menu.html';
-    }
     $("#boton_aceptar").on('click', addUser);
+    setTimeout(checkConnection, 500);
 }
 
 function addUser(){
-    if ($("#nombre")[0].value != "" && $("#apellido")[0].value != "" && $("#telefono")[0].value != "" && $("#mail")[0].value != ""){
+    var verified = verifyFields();
+    if (verified.status){
         var user = {
-            nombre: $("#nombre")[0].value,
-            apellido: $("#apellido")[0].value,
-            telefono: $("#telefono")[0].value,
-            mail: $("#telefono")[0].value
+            firstname: $("#nombre")[0].value,
+            lastname: $("#apellido")[0].value,
+            phone: $("#telefono")[0].value,
+            email: $("#mail")[0].value
         }
-        setCache("user", user);
-        window.location.href = 'menu.html';
+        requestService(HOST + "users.json", "POST", {user: user}, success, fail);
     } else {
-        showMessage("Favor de introducir todos los datos");
+        showMessage(verified.message);
     }
+}
+
+function success(data){
+    setCache("user", data);
+    window.location.href = 'menu.html';
+}
+
+function fail(error){
+    showMessage("Los datos no se pudieron guardar, por favor intenta nuevamente más tarde.");
+}
+
+function verifyFields(){
+    var result = {};
+    
+    if ($("#nombre")[0].value != "" && $("#apellido")[0].value != "" && $("#telefono")[0].value != "" && $("#mail")[0].value != "") {
+        if ( !validateEmail($("#mail")[0].value) ){
+            result["status"] = false;
+            result["message"] = "El email proporcionado no es válido";
+        } else if (!validatePhone($("#telefono")[0].value)) {
+            result["status"] = false;
+            result["message"] = "El teléfono proporcionado debe contener mínimo 8 números.";
+        } else {
+            result["status"] = true;
+        }
+    } else {
+        result["status"] = false;
+        result["message"] = "Favor de llenar todos los campos.";
+    }
+    return result;
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+function validatePhone(phone){
+    var re = /^\d{8,}$/;
+    return re.test(phone);
 }

@@ -30,6 +30,7 @@ function init() {
             }
         }
     });
+    setTimeout(checkConnection, 500);
 }
 
 function goEventos(){
