@@ -457,6 +457,34 @@ h3 {
   margin: 0.5em 1em;
 }
 
+.field {}
+
+.field label{
+  display: inline-block;
+  margin: 0.5em 1em auto 0.5em;
+  text-align: left;
+  width: 1.5em;
+}
+
+.field input{
+  border-radius: 0.4em;
+  border:solid 2px #BFBDBD;
+}
+
+.guardados {}
+
+.guardados input {
+  margin: 1em 1em 0.8em 0.5em;
+}
+
+.guardados label {
+  font-size: .8em;
+}
+
+.rp_field {
+  font-size: .8em;
+}
+
 /* menu */
 
 #menu{

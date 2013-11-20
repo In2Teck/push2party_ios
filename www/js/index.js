@@ -176,47 +176,33 @@ function modalDialogue(title, itemArray, options){
     $(".simplemodal-wrap").css("overflow","");
 }
 
-function messageDialogue(title, options){
-    
-    if (options == null) {
-        options = {};
-    }
-    //options["closeClass"] = "dialogueClass";
-    options["minHeight"] = 460;
-    options["minWidth"] = 400;
-    $("#modal-title")[0].innerHTML = title;
-    $("#modal-content").empty();
-    $("#modal-content").append("<textarea rows=5 cols=22 class='textarea'></textarea>");
-    $("#modal-content").append("<br/><br/><p style='text-align: center;'><a href='#' class='btn_enviar' id='btn_enviar'></a></p>");
-    $("#btn_enviar").on('click', function(){
-      $.modal.close();
-    });
-    $("#modal-alert").modal(options);
-    $(".simplemodal-wrap").css("overflow","");
-}
-
 function contactDialogue(title, options){
     
     if (options == null) {
         options = {};
     }
     //options["closeClass"] = "dialogueClass";
-    options["minHeight"] = 500;
+    options["minHeight"] = 650;
     options["minWidth"] = 400;
     $("#modal-title")[0].innerHTML = title;
     $("#modal-content").empty();
-    $("#modal-content").append("<textarea rows=5 cols=22 class='textarea'></textarea>");
-    $("#modal-content").append("<br/><br/><p style='text-align: center;'><a href='#' class='btn_enviar' id='btn_enviar'></a></p>");
-    $("#btn_enviar").on('click', function(){
-                        $.modal.close();
-                        });
     $("#modal-alert").modal(options);
     $(".simplemodal-wrap").css("overflow","");
-    
+    $("#name_input").focus();
 }
 
 function checkConnection(){
     if (navigator.network.connection.type == Connection.NONE){
         showMessage("Esta aplicación necesita conexión a internet para funcionar");
     }
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+                  
+function validatePhone(phone){
+    var re = /^\d{8,}$/;
+    return re.test(phone);
 }

@@ -20,7 +20,7 @@
         <header>
             <div id="titulo_nav" data-role="header" data-theme="c" class="ui-header ui-bar-c" role="banner">
                 <nav>
-                    <a href="javascript:history.back(1)" id="back"></a>
+                    <a href="javascript:history.go(-((history.length+1)-backHistory))" id="back"></a>
                 </nav>
             </div> 
         </header>
@@ -29,23 +29,41 @@
           <div id="cotizacion">
             <p class="h1">COTIZACION</p>
             <br/>
-            <div id="articulos">
-              <p class="h2 col">PRODUCTO</p>
-            </div>
-            <div id="cantidad">
-              <p class="h2">CANTIDAD</p>
-            </div>
           </div>
           <br/>
           <p class="action_buttons">
-            <a href='#' class='btn_confirmar' id='btn_confirmar'></a>
-            <a href='#' class='btn_borrar' id='btn_borrar'></a>
           </p>
         </article>
         <div id="modal-alert">
             <p class="h3 centrado_horizontal" id="modal-title"></p>
             <br/>
-            <p id="modal-content"></p>
+            <p id="modal-content">
+                <p class='field'>
+                    <label for='name_input'>Nombre</label>
+                    <input type='text' size='14' id='name_input'></input>
+                </p>
+                <p class='field'>
+                    <label for='email_input'>Email</label>
+                    <input type='text' size='14' id='email_input'></input>
+                </p>
+                <p class='field'>
+                    <label for='telefono_input'>Teléfono</label>
+                    <input type='text' size='14' id='telefono_input'></input>
+                </p>
+                <p class='guardados'>
+                    <input type='checkbox' id='checkbox_input' checked='checked'></input>
+                    <label for='checkbox_input'>Utilizar mis datos guardados</label>
+                </p>
+                <p class='rp_field' style='margin: 1em auto 1em .6em;'>En caso de que un RP te haya asistido por favor entre su ID.</p>
+                    <p class='field'>
+                    <label for='rp_input'>RP ID</label>
+                    <input type='text' size='6' id='rp_input'></input>
+                </p>
+                <br/>
+                <p style='text-align: center;'>
+                    <a href='#' class='btn_enviar' id='btn_enviar'></a>
+                </p>
+            </p>
         </div>
       </section>
     </body>
