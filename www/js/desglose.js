@@ -5,7 +5,6 @@ var backHistory;
 function init() {
     $("#btn_enviar").on('click', sendData);
     populateItems();
-    $("#checkbox_input").on('click', populateUser);
     populateUser();
     backHistory = history.length;
 }
@@ -21,6 +20,14 @@ function eraseData(){
 function sendData(){
     var verified = verifyFields();
     if (verified.status){
+        if($("#checkbox_input").is(':checked')){
+            var user = {
+                firstname: $("#name_input")[0].value,
+                phone: $("#telefono_input")[0].value,
+                email: $("#email_input")[0].value
+            }
+            setCache("user", user);
+        }
         var orden = {
             nombre: $("#name_input")[0].value,
             email: $("#email_input")[0].value,
@@ -47,7 +54,7 @@ function verifyFields(){
             result["message"] = "El email proporcionado no es válido";
         } else if (!validatePhone($("#telefono_input")[0].value)) {
             result["status"] = false;
-            result["message"] = "El teléfono proporcionado debe contener mínimo 8 números.";
+            result["message"] = "El teléfono debe contener mínimo 8 números.";
         } else {
             result["status"] = true;
         }
@@ -80,9 +87,9 @@ function seleccionBorrar(buttonIndex){
 }
 
 function populateUser(){
-    if($("#checkbox_input").is(':checked')){
+    if(isCache("user")){
         user = getCache("user");
-        $("#name_input")[0].value = user.firstname + " " + user.lastname;
+        $("#name_input")[0].value = user.firstname;
         $("#email_input")[0].value = user.email;
         $("#telefono_input")[0].value = user.phone;
     }

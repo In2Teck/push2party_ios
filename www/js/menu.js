@@ -7,6 +7,7 @@ var EVENTOS_RANGE_1 = 11; var EVENTOS_RANGE_2 = 30;
 $(document).on('ready', init);
 
 function init() {
+    $("#menu_dial").append("<input type='text' class='dial' data-cursor='true'/>");
     goPaquetes();
     $(".dial").knob({
         'displayInput': false,

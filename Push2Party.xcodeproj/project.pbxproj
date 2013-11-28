@@ -315,7 +315,7 @@
 				LastUpgradeCheck = 500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = U7443L5ZBL;
+						DevelopmentTeam = TM892Z38C7;
 					};
 				};
 			};
@@ -474,7 +474,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -499,7 +499,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Push2Party;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "0648682E-0AC4-4392-939B-A7824BC11ACF";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -536,7 +536,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Push2Party;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "0648682E-0AC4-4392-939B-A7824BC11ACF";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -552,8 +552,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jorge Benjamin Hernandez Zetter (Z9C27FZ69G)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jorge Benjamin Hernandez Zetter (Z9C27FZ69G)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
@@ -583,7 +583,7 @@
 					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
 					"-ObjC",
 				);
-				PROVISIONING_PROFILE = "0648682E-0AC4-4392-939B-A7824BC11ACF";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -600,8 +600,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jorge Benjamin Hernandez Zetter (U7443L5ZBL)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jorge Benjamin Hernandez Zetter (U7443L5ZBL)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Oscar  Crespo E (TM892Z38C7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oscar  Crespo E (TM892Z38C7)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
@@ -630,7 +630,7 @@
 					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
 					"-ObjC",
 				);
-				PROVISIONING_PROFILE = "0648682E-0AC4-4392-939B-A7824BC11ACF";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
