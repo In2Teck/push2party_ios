@@ -4,7 +4,7 @@ var combos = [];
 function init() {
     
     requestService(HOST + "combos.json", "GET", null, success, fail);
-    
+    navigator.notification.loadingStart();
 }
 
 function success(data){
@@ -18,6 +18,7 @@ function success(data){
         combos.push(combo);
     });
     createCombos();
+    navigator.notification.loadingStop();
 }
 
 function carousel_initCallback(carousel) {

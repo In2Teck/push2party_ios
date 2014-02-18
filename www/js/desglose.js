@@ -100,23 +100,40 @@ function populateItems(){
     var total = 0;
     $.each(shopping.paquetes, function(value, key){
         if (key.quantity > 0) {
-           $("#articulos").append("<p>" + key.description + "</p>");
-           $("#cantidad").append("<p>" + key.quantity + "</p>");
+           //$("#articulos").append("<p>" + key.description + "</p>");
+           //$("#cantidad").append("<p>" + key.quantity + "</p>");
            total += key.quantity * key.price;
         }
     });
     $.each(shopping.items, function(value, key){
         if (key.quantity > 0) {
-           $("#articulos").append("<p>" + key.description + "</p>");
-           $("#cantidad").append("<p>" + key.quantity + "</p>");
+           //$("#articulos").append("<p>" + key.description + "</p>");
+           //$("#cantidad").append("<p>" + key.quantity + "</p>");
            total += key.quantity * key.price;
         }
     });
     
     if (total >0){
         $("#cotizacion").append("<div id='articulos'><p class='h2 col'>PRODUCTO</p></div><div id='cantidad'><p class='h2'>CANTIDAD</p></div>");
-        $("#articulos").append("<br/><p>TOTAL</p>");
+        
+        $.each(shopping.paquetes, function(value, key){
+	        if (key.quantity > 0) {
+	           $("#articulos").append("<p>" + key.description + "</p>");
+	           $("#cantidad").append("<p>" + key.quantity + "</p>");
+	           total += key.quantity * key.price;
+	        }
+	    });
+	    $.each(shopping.items, function(value, key){
+	        if (key.quantity > 0) {
+	           $("#articulos").append("<p>" + key.description + "</p>");
+	           $("#cantidad").append("<p>" + key.quantity + "</p>");
+	           total += key.quantity * key.price;
+	        }
+	    });
+	    
+	    $("#articulos").append("<br/><p>TOTAL</p>");
         $("#cantidad").append("<br/><p>$ "+ total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +"</p>");
+        
         $(".action_buttons").append("<a href='#' class='btn_confirmar' id='btn_confirmar'></a>");
         $(".action_buttons").append("<a href='#' class='btn_borrar' id='btn_borrar'></a>");
         $("#btn_confirmar").on('click', openModal);
