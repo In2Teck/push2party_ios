@@ -1,5 +1,5 @@
 $(document).on('ready', function(){
-	$.loader({});
+	$.loader();
     init();
 });
 var combos = [];
@@ -7,7 +7,7 @@ var combos = [];
 function init() {
     
     requestService(HOST + "combos.json", "GET", null, success, fail);
-    
+
 }
 
 function success(data){
