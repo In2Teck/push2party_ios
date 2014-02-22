@@ -1,5 +1,5 @@
 $(document).on('ready', function(){
-	$.loader();
+    $.loader({className:"animated-loader", content:""});
     init();
 });
 var combos = [];
@@ -21,7 +21,8 @@ function success(data){
         combos.push(combo);
     });
     createCombos();
-    $(".loader").hide();
+    $("#jquery-loader-background").remove();
+    $("#jquery-loader").remove();
 }
 
 function carousel_initCallback(carousel) {

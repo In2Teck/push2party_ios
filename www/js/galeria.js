@@ -1,4 +1,7 @@
-$(document).on('ready', init);
+$(document).on('ready', function(){
+               $.loader({className:"animated-loader", content:""});
+               init();
+});
 
 function init() {
     requestService(HOST + "galleries.json", "GET", null, success, fail);
@@ -15,6 +18,8 @@ function success(data){
            
     });
     $("a[rel^='prettyPhoto']").prettyPhoto({show_title: false, theme:'light_square', social_tools: false});
+    $("#jquery-loader-background").remove();
+    $("#jquery-loader").remove();
 }
 
 function fail(error){
