@@ -1,4 +1,7 @@
-$(document).on('ready', init);
+$(document).on('ready', function(){
+	$.loader({className:"animated-loader", content:""});
+	init();
+});
 var backHistory;
 
 
@@ -7,6 +10,8 @@ function init() {
     populateItems();
     populateUser();
     backHistory = history.length;
+    $("#jquery-loader-background").remove();
+    $("#jquery-loader").remove();
 }
 
 function openModal(){
