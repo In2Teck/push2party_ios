@@ -1,4 +1,7 @@
-$(document).on('ready', init);
+$(document).on('ready', function(){
+	$.loader({className:"animated-loader", content:""});
+	init();
+});
 
 function init() {
     requestService("http://push2party.herokuapp.com/items/by_parent_id_with_children.json", "GET", {parent_id: 4}, success, fail);
@@ -13,6 +16,8 @@ function success(data){
               });
            }
     });
+    $("#jquery-loader-background").remove();
+    $("#jquery-loader").remove();
 }
 
 function fail(error){
