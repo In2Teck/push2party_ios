@@ -131,7 +131,7 @@ div.pp_pic_holder{display:none;position:absolute;width:100px;z-index:10000}
 .pp_nav .pp_play,.pp_nav .pp_pause{float:left;margin-right:4px;text-indent:-10000px}
 a.pp_arrow_previous,a.pp_arrow_next{display:block;float:left;height:15px;margin-top:3px;overflow:hidden;text-indent:-10000px;width:14px}
 .pp_hoverContainer{position:absolute;top:0;width:100%;z-index:2000}
-.pp_gallery{display:none;left:50%;margin-top:-50px;position:absolute;z-index:10000}
+.pp_gallery{display:block;left:50%;margin-top:-50px;position:absolute;z-index:10000}
 .pp_gallery div{float:left;overflow:hidden;position:relative}
 .pp_gallery ul{float:left;height:35px;position:relative;white-space:nowrap;margin:0 0 0 5px;padding:0}
 .pp_gallery ul a{border:1px rgba(0,0,0,0.5) solid;display:block;float:left;height:33px;overflow:hidden}
