@@ -208,5 +208,6 @@ function validatePhone(phone){
 }
 
 function validateDate(date){
-    alert(date);
+    var re = /^\d{4}-\d{2}-\d{2}$/;
+    return re.test(date);
 }
