@@ -23,5 +23,7 @@ function success(data){
 }
 
 function fail(error){
+    $("#jquery-loader-background").remove();
+    $("#jquery-loader").remove();
     alert(error);
 }
