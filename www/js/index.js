@@ -206,3 +206,7 @@ function validatePhone(phone){
     var re = /^\d{8,}$/;
     return re.test(phone);
 }
+
+function validateDate(date){
+    alert(date);
+}
