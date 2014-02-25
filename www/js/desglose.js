@@ -37,6 +37,7 @@ function sendData(){
             nombre: $("#name_input")[0].value,
             email: $("#email_input")[0].value,
             telefono: $("#telefono_input")[0].value,
+            fecha: $("#fecha_input")[0].value,
             compra: getOrInitShoppingVar()
         }
         var order = {
@@ -53,13 +54,16 @@ function sendData(){
 function verifyFields(){
     var result = {};
     
-    if ($("#name_input")[0].value != "" && $("#telefono_input")[0].value != "" && $("#email_input")[0].value != "") {
+    if ($("#name_input")[0].value != "" && $("#telefono_input")[0].value != "" && $("#email_input")[0].value != "" && $("#fecha_input")[0].value != "") {
         if ( !validateEmail($("#email_input")[0].value) ){
             result["status"] = false;
             result["message"] = "El email proporcionado no es válido";
         } else if (!validatePhone($("#telefono_input")[0].value)) {
             result["status"] = false;
             result["message"] = "El teléfono debe contener mínimo 8 números.";
+        } else if (!validateDate($("#fecha_input")[0].value)) {
+            result["status"] = false;
+            result["message"] = "La fecha no es válida.";
         } else {
             result["status"] = true;
         }
