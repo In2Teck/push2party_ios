@@ -498,6 +498,12 @@ h3 {
   overflow: auto;
 }
 
+.contenedor-label{
+	display: inline-block;
+	width:30%;
+}
+
+
 #modal-content div {
   background-color: rgba(3,3,3,0.3);
   height: 10%;
