@@ -265,8 +265,8 @@ h3 {
 }
 
 .ui-spinner-input {
-  height: 20px;
-  width: 25px;
+  height: 25px;
+  width: 30px;
 }
 
 .ui-spinner-button{
@@ -275,12 +275,12 @@ h3 {
 }
 
 .ui-spinner-up{ 
-  background: url('../img/btn_next_tr.png') no-repeat center;
+  /*background: url('../img/btn_next_tr.png') no-repeat center;*/
 }
 
 .ui-spinner-down{
-  background: url('../img/btn_prev_tr.png') no-repeat center;
-  float: left;
+  /*background: url('../img/btn_prev_tr.png') no-repeat center;
+  float: left;*/
 }
 
 .none {

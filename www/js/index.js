@@ -151,7 +151,7 @@ function modalDialogue(title, itemArray, options){
     $("#modal-content").append("<br/><table>");
     $.each(itemArray, function(value, key){
            var value = initOrGetValue("items", key.id, key.price, key.description);
-           $("#modal-content").append("<tr><td id='"+key.id+"' class='items'>"+key.name+"</td><td class='numbers'><input readonly id='"+ key.id+ "_spinner' value="+ value.quantity +" size=2 maxlength=2 /></td></tr>");
+           $("#modal-content").append("<tr><td id='"+key.id+"' class='items'>"+key.name+"</td><td class='numbers'><input type='text' pattern='\d*' min='0' max='99' id='"+ key.id+ "_spinner' value="+ value.quantity +" size=2 maxlength=2  /></td></tr>");
            $("#"+key.id+"_spinner").spinner({
              max: 99,
              min: 0,
