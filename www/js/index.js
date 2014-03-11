@@ -151,7 +151,11 @@ function modalDialogue(title, itemArray, options){
     $("#modal-content").append("<br/><table>");
     $.each(itemArray, function(value, key){
            var value = initOrGetValue("items", key.id, key.price, key.description);
-           $("#modal-content").append("<tr><td id='"+key.id+"' class='items'>"+key.name+"</td><td class='numbers'><input type='number' pattern='\d*' min='0' max='99' id='"+ key.id+ "_spinner' value="+ value.quantity +" size=2 maxlength=2  /></td></tr>");
+           var numero = "";
+           if (value.quantity != 0){
+            numero = value.quantity;
+           }
+           $("#modal-content").append("<tr><td id='"+key.id+"' class='items'>"+key.name+"</td><td class='numbers'><input type='tel' pattern='\d*' min='0' max='99' id='"+ key.id+ "_spinner' value='"+ numero +"' size=2 maxlength=2 class='numero_input' /></td></tr>");
            $("#"+key.id+"_spinner").spinner({
              max: 99,
              min: 0,
@@ -174,6 +178,7 @@ function modalDialogue(title, itemArray, options){
     //$("#modal-alert").css("height", "600px");
     $("#modal-alert").modal(options);
     $(".simplemodal-wrap").css("overflow","");
+    $(".numero_input")[0].focus();
 }
 
 function contactDialogue(title, options){
@@ -182,7 +187,7 @@ function contactDialogue(title, options){
         options = {};
     }
     //options["closeClass"] = "dialogueClass";
-    options["minHeight"] = 650;
+    options["minHeight"] = 700;
     options["minWidth"] = 400;
     $("#modal-title")[0].innerHTML = title;
     $("#modal-content").empty();

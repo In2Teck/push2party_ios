@@ -84,15 +84,17 @@ nav {
 }
 
 .btn_ver{
-	margin-top:90px;
-	margin-left: auto;
-	margin-right: auto;
-	float:left
+	margin: 105px 0 -10px;
 }
 
-btn_ver_contenedor{
+.btn_ver_contenedor{
 	width:100%;
-	overflow:hidden;
+    text-align: center;
+}
+
+.btn_ver_contenedor a{
+    text-decoration: none;
+    color: black;
 }
 
 .jcarousel {
@@ -108,6 +110,8 @@ btn_ver_contenedor{
 
 #paquete {
     height: 800px;
+    max-width: 640px;
+    overflow-x: hidden;
 }
 #paquete a{
   display: inline-block;
@@ -152,7 +156,6 @@ btn_ver_contenedor{
   padding-right: 1em;
   padding-left: 1em;
   height: 100%;
-  margin-top: 4em;
 }
 
 .descripcion p, a {
@@ -570,8 +573,7 @@ h3 {
 .sponsor{
 	width:100%;
 	heigth:auto;
-	max-width:320px;
-	max-heigth:480px;
+    text-align: center;
 }
 
 .sponsor img{

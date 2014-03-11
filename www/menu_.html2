@@ -8,36 +8,33 @@
     <link rel="stylesheet" href="css/normalize.min.css" />
     <link rel="stylesheet" href="css/jquery.mobile.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <!--script type="text/javascript" src="phonegap.js"></script-->
+    <script type="text/javascript" src="phonegap.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <script src="js/modernizr.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/paquetes.js"></script>
-    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-    <script type="text/javascript" src="js/jquery.loader.js"></script>
-    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
-    <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery.knob.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
   </head>
     <body>
       <header>
         <div id="titulo_nav" data-role="header" data-theme="c" class="ui-header ui-bar-c" role="banner">
           <nav>
-            <a href="menu.html" id="back"></a>
             <a href="desglose.html" id="shopping"></a>
           </nav>
-        </div>      
+        </div>
       </header>
-      <section>
-      <br/>
-        <article id="paquete">
-            <div class="detalles" id="carousel">
-                <ul id="paquetes_list">
-                </ul>
-            </div>
-          <a href="#" class="btn_prev"></a>
-          <a href="#" class="btn_next"></a>
+      <section id="menu">
+        <article>
+          <br/>
+          <img id="menu_img" src="img/rueda.png" />
+          <a href="#" id="btn_menu"></a>
         </article>
+        <div id="menu_dial">
+        </div>
+      </section>
+      <section id="selected_label">
+          <p id="menu_label"></p>
       </section>
     </body>
 </html>

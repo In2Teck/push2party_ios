@@ -26,14 +26,16 @@
         };
         
         function success(data){
-        	var url = data[0].image_url;
-        	var str = '<img src="'+url+'" alt="sponsor 1">';
-        	$(".sponsor").append(str);
-        	
-        	var isCachedUser = isCache("user");
-            setTimeout(function(){
-                window.location.href = 'menu.html';
-            }, 1500);
+            
+            var isCachedUser;
+            var img = new Image();
+            img.src = data[0].image_url;
+            img.onload = function() {
+                var str = '<img src="'+img.src+'" alt="sponsor 1">';
+                $(".sponsor").append(str);
+                isCachedUser = isCache("user");
+                setTimeout(function(){ window.location.href = 'menu.html';}, 2000);
+            };
         }
         
     </script>
