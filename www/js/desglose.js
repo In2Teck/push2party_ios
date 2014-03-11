@@ -77,7 +77,8 @@ function verifyFields(){
 
 function success(data){
     resetShoppingVar();
-    showAlert("Tu cotización ha sido enviada a uno de nuestros representantes, nos comunicaremos contigo a la brevedad posible.", "Cotización exitosa", "Continuar", redirectSponsor);
+    //showAlert("Tu cotización ha sido enviada a uno de nuestros representantes, nos comunicaremos contigo a la brevedad posible.", "Cotización exitosa", "Continuar", redirectSponsor);
+    redirectSponsor();
 }
 
 function redirectSponsor(){
