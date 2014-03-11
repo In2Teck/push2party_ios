@@ -83,6 +83,29 @@ nav {
   margin-top: 0.8em;
 }
 
+.btn_ver{
+	margin-top:90px;
+	margin-left: auto;
+	margin-right: auto;
+	float:left
+}
+
+btn_ver_contenedor{
+	width:100%;
+	overflow:hidden;
+}
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.jcarousel li {
+    float: left;
+    width: 100%;
+}
+
 #paquete {
     height: 800px;
 }
@@ -540,4 +563,18 @@ h3 {
     background-position: center center;
     background-repeat: no-repeat;
  
+}
+
+
+/*for Sponsors*/
+.sponsor{
+	width:100%;
+	heigth:auto;
+	max-width:320px;
+	max-heigth:480px;
+}
+
+.sponsor img{
+	margin-left:auto;
+	margin-right:auto;
 }

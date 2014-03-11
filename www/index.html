@@ -23,16 +23,17 @@
             
             requestService(HOST + "sponsors.json", "GET", null, success, null);
             
-            var isCachedUser = isCache("user");
-            setTimeout(function(){
-                window.location.href = 'menu.html';
-            }, 1500);
         };
         
         function success(data){
         	var url = data[0].image_url;
         	var str = '<img src="'+url+'" alt="sponsor 1">';
         	$(".sponsor").append(str);
+        	
+        	var isCachedUser = isCache("user");
+            setTimeout(function(){
+                window.location.href = 'menu.html';
+            }, 1500);
         }
         
     </script>

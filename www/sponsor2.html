@@ -19,12 +19,27 @@
         $(document).on('ready', init);
         
         function init(){
-            setTimeout(function(){
-                window.location.href = 'menu.html'
-            }, 1500);
+            requestService(HOST + "ping.json", "GET", null, null, null);
+            
+            requestService(HOST + "sponsors.json", "GET", null, success, null);
+            
         };
+        
+        function success(data){
+        	var url = data[3].image_url;
+        	var str = '<img src="'+url+'" alt="sponsor 2">';
+        	$(".sponsor").append(str);
+        	
+        	var isCachedUser = isCache("user");
+            setTimeout(function(){
+                window.location.href = 'menu.html';
+            }, 1500);
+        }
+        
     </script>
-    <img src="img/sponsor_2.png" alt="sponsor 2">
+    <!--img src="img/sponsor_2.png" alt="sponsor 2"-->
+    <div class="sponsor">
+    </div>
     <body>
     </body>
 </html>

@@ -54,10 +54,11 @@ function createCombos(){
                 appendedString += "<p>"+item+"</p>";
            });
            
-        appendedString += "</div><div class='descripcion'>";
+        appendedString += "</div>";
+        appendedString += "<div class='btn_ver_contenedor'><a class='btn_ver' href='"+combo.image+"' rel='prettyPhoto' >Ver</a></div>";
+        appendedString += "<div class='descripcion'>";
         appendedString += "<p class='paquete_id'>"+combo.name+"</p><p class='precio'>$"+combo.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+"</p>";
-        appendedString += "<a href='#' class='btn_agregar' id='btn_paquete_"+ combo.id +"'></a><br/>";
-        appendedString += "<a href='"+combo.image+"' rel='prettyPhoto' >Ver</a></div></li>";
+        appendedString += "<a href='#' class='btn_agregar' id='btn_paquete_"+ combo.id +"'></a><br/></div></li>";
 
         $("#paquetes_list").append(appendedString);
         $("a[rel^='prettyPhoto']").prettyPhoto({show_title: false, theme:'light_square', social_tools: false});

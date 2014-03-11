@@ -4,37 +4,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Push 2 Party</title>
+    <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=0.5, maximum-scale=1, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" href="css/normalize.min.css" />
-    <link rel="stylesheet" href="css/jquery.mobile.min.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <!--link rel="stylesheet" href="css/index2.css" /-->
     <script type="text/javascript" src="phonegap.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <script src="js/modernizr.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/jquery.knob.js"></script>
-    <script type="text/javascript" src="js/menu.js"></script>
+	<style>
+	.fondo{
+		width:100%;
+		margin-bottom: 100px;
+		padding:0px;
+		bottom:50px;
+	}
+	footer > a{
+		width:18%;
+		heigth:auto;
+		margin-left:5px;
+	}
+	</style>
   </head>
     <body>
-      <header>
-        <div id="titulo_nav" data-role="header" data-theme="c" class="ui-header ui-bar-c" role="banner">
-          <nav>
-            <a href="desglose.html" id="shopping"></a>
-          </nav>
-        </div>
-      </header>
-      <section id="menu">
-        <article>
-          <br/>
-          <img id="menu_img" src="img/rueda.png" />
-          <a href="#" id="btn_menu"></a>
-        </article>
-        <div id="menu_dial">
-        </div>
-      </section>
-      <section id="selected_label">
-          <p id="menu_label"></p>
-      </section>
+		<header style="background-color:#eee;">
+			<div id="titulo_nav" data-role="header" data-theme="c" class="ui-header ui-bar-c" role="banner">
+			  <nav>
+				<a href="desglose.html" id="shopping"></a>
+			  </nav>
+			</div>
+		  </header>
+		  <br/>
+		  
+			<img class="fondo" src="img/menu/logo.png" />
+		
+		<footer>
+			<a href="paquetes.html"><img src="img/menu/btn_paquetes.png" /></a>
+			<a href="eventos.html"><img src="img/menu/btn_crea_evento.png" /></a>
+			<a href="galeria.html"><img src="img/menu/btn_galeria.png" /></a>
+			<a href="beneficios.html"><img src="img/menu/btn_beneficios.png" /></a>
+			<a href="contacto.html"><img src="img/menu/btn_contacto.png" /></a>
+		</footer>
     </body>
 </html>
