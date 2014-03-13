@@ -1,6 +1,26 @@
 $(document).on('ready', function(){
 	$.loader({className:"animated-loader", content:""});
-	init();
+	
+	requestService(HOST + "sponsors.json", "GET", null, success, null);
+	function success(data){
+		var img = new Image();
+        img.src = data[2].image_url;
+        img.onload = function() {
+            var str = '<img class="img-sponsor" src="'+img.src+'" alt="sponsor 2">';
+
+	        $(".sponsor").append(str);
+	        $(".sponsor").css('width','100%');
+	        $(".sponsor").css('heigth','100%');
+	        $(".sponsor").css('opacity','.1');
+	        $(".sponsor").css('position','absolute');
+	        $(".sponsor").css('text-align','center');
+	        $(".img-sponsor").css('margin-top','50px');
+            $(".img-sponsor").css('width','100%');
+	        $(".img-sponsor").css('heigth','auto');
+	        
+            init();
+        };
+	}
 });
 var backHistory;
 
