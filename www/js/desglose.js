@@ -11,12 +11,12 @@ $(document).on('ready', function(){
 	        $(".sponsor").append(str);
 	        $(".sponsor").css('width','100%');
 	        $(".sponsor").css('heigth','100%');
-	        $(".sponsor").css('opacity','.1');
 	        $(".sponsor").css('position','absolute');
 	        $(".sponsor").css('text-align','center');
 	        $(".img-sponsor").css('margin-top','50px');
             $(".img-sponsor").css('width','100%');
 	        $(".img-sponsor").css('heigth','auto');
+   	        $(".img-sponsor").css('opacity','.1');
 	        
             init();
         };
