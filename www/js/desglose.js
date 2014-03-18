@@ -4,7 +4,7 @@ $(document).on('ready', function(){
 	requestService(HOST + "sponsors.json", "GET", null, success, null);
 	function success(data){
 		var img = new Image();
-        img.src = data[2].image_url;
+        img.src = data[1].image_url;
         img.onload = function() {
             var str = '<img class="img-sponsor" src="'+img.src+'" alt="sponsor 2">';
 
