@@ -120,26 +120,31 @@ nav {
 .paquete_1{
   background: url('../img/paquete_1.png') no-repeat 50% 0%;
   background-size: 632px 672px;
+  margin-top:18px;
 }
 
 .paquete_2{
   background: url('../img/paquete_2.png') no-repeat 50% 0%;
   background-size: 632px 672px;
+  margin-top:18px;
 }
 
 .paquete_3{
   background: url('../img/paquete_3.png') no-repeat 50% 0%;
   background-size: 632px 672px;
+  margin-top:18px;
 }
 
 .paquete_4{
   background: url('../img/paquete_4.png') no-repeat 50% 0%;
   background-size: 632px 672px;
+  margin-top:18px;
 }
 
 .elementos{
     padding-top: 2em;
     height: 490px;
+    margin-top:-15px;
 }
 
 .elementos_compress{
