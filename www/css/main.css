@@ -120,25 +120,25 @@ nav {
 .paquete_1{
   background: url('../img/paquete_1.png') no-repeat 50% 0%;
   background-size: 632px 672px;
-  margin-top:18px;
+  margin-top:28px;
 }
 
 .paquete_2{
   background: url('../img/paquete_2.png') no-repeat 50% 0%;
   background-size: 632px 672px;
-  margin-top:18px;
+  margin-top:28px;
 }
 
 .paquete_3{
   background: url('../img/paquete_3.png') no-repeat 50% 0%;
   background-size: 632px 672px;
-  margin-top:18px;
+  margin-top:28px;
 }
 
 .paquete_4{
   background: url('../img/paquete_4.png') no-repeat 50% 0%;
   background-size: 632px 672px;
-  margin-top:18px;
+  margin-top:28px;
 }
 
 .elementos{
@@ -150,6 +150,7 @@ nav {
 .elementos_compress{
     padding-top: 3.2em;
     height: 450px;
+    margin-top:-15px;
 }
 
 .elementos_compress p{
@@ -265,6 +266,13 @@ h3 {
   background: url('../img/btn_enviar.png') no-repeat center;
   height: 60px;
   width: 122px;
+}
+
+.icono_contacto{
+	width: 20%;
+	heigth: auto;
+	margin: 10px;
+	float: left;
 }
 
 .textarea {
