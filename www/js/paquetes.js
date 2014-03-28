@@ -44,7 +44,7 @@ function createCombos(){
     $.each(combos, function(i, combo) {
         var classInt = (i + 1)%4 == 0 ? 4 : (i + 1)%4;
         var appendedString = "<li id='paquete_" + (i + 1) + "' class='paquete_" + classInt + "'>";
-        appendedString += "<p style='postition:absolute; left:0px; margin-top:-15px;' class='paquete_id'>"+combo.name+"</p>";
+        appendedString += "<p style='float: left; margin: -20px auto auto 10px;' class='paquete_id'>"+combo.name+"</p>";
            var items = combo.items.split(",");
            if (items.length > 8){
               appendedString += "<div class='elementos_compress'>";
@@ -52,13 +52,13 @@ function createCombos(){
               appendedString += "<div class='elementos'>";
            }
            $.each(items, function(j, item){
-                appendedString += "<strong><p>"+item+"</p></strong>";
+                  appendedString += "<p style='color: black;'>"+item+"</p>";
            });
            
         appendedString += "</div>";
         appendedString += "<div class='btn_ver_contenedor'></div>";
-        appendedString += "<div class='descripcion'>";
-        appendedString += "<p class='paquete_id'>$"+combo.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+"</p><a class='precio' href='"+combo.image+"' rel='prettyPhoto' >ver foto</a>";
+        appendedString += "<div class='descripcion'><br/><br/>";
+        appendedString += "<p class='paquete_id' style='font-family: \"Labtopb\";'>$"+combo.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+"</p><a class='precio' href='"+combo.image+"' rel='prettyPhoto' >ver foto</a>";
         appendedString += "<a href='#' class='btn_agregar' id='btn_paquete_"+ combo.id +"'></a><br/></div></li>";
 
         $("#paquetes_list").append(appendedString);

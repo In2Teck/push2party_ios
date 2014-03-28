@@ -13,6 +13,7 @@ $(document).on('ready', function(){
 	        $(".sponsor").css('heigth','100%');
 	        $(".sponsor").css('position','absolute');
 	        $(".sponsor").css('text-align','center');
+            $(".sponsor").css('z-index','-10');
 	        $(".img-sponsor").css('margin-top','50px');
             $(".img-sponsor").css('width','100%');
 	        $(".img-sponsor").css('heigth','auto');
@@ -97,8 +98,8 @@ function verifyFields(){
 
 function success(data){
     resetShoppingVar();
-    //showAlert("Tu cotización ha sido enviada a uno de nuestros representantes, nos comunicaremos contigo a la brevedad posible.", "Cotización exitosa", "Continuar", redirectSponsor);
-    redirectSponsor();
+    showAlert("Tu cotización ha sido enviada a uno de nuestros representantes, nos comunicaremos contigo a la brevedad posible.", "Cotización exitosa", "Continuar", redirectSponsor);
+    //redirectSponsor();
 }
 
 function redirectSponsor(){
@@ -161,8 +162,8 @@ function populateItems(){
 	        }
 	    });
 	    
-	    $("#articulos").append("<br/><p>TOTAL</p>");
-        $("#cantidad").append("<br/><p>$ "+ total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +"</p>");
+	    $("#articulos").append("<br/><p style='font-family: \"Labtopb\"'>TOTAL</p>");
+        $("#cantidad").append("<br/><p style='font-family: \"Labtopb\"'>$ "+ total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +"</p>");
         
         $(".action_buttons").append("<a href='#' class='btn_confirmar' id='btn_confirmar'></a>");
         $(".action_buttons").append("<a href='#' class='btn_borrar' id='btn_borrar'></a>");
