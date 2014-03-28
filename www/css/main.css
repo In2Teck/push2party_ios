@@ -5,13 +5,6 @@
   font-style: normal;
 }
 
-@font-face{
-  font-family: 'Labtopb';
-  src: url('../fonts/LABTOPB_.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 #back {
   background: url('../img/back.png') no-repeat center;
   float: left;
@@ -149,17 +142,15 @@ nav {
 }
 
 .elementos{
-    padding-top: 2.5em;
+    padding-top: 2em;
     height: 490px;
-    margin-top:-8px;
-    line-height: .8;
-    font-family: 'Labtopb';
+    margin-top:-15px;
 }
 
 .elementos_compress{
     padding-top: 3.2em;
     height: 450px;
-    font-family: 'Labtopb';
+    margin-top:-15px;
 }
 
 .elementos_compress p{
@@ -171,7 +162,6 @@ nav {
   padding-right: 1em;
   padding-left: 1em;
   height: 100%;
-  padding-top: .8em;
 }
 
 .descripcion p, a {
@@ -279,10 +269,16 @@ h3 {
 }
 
 .icono_contacto{
+	text-align: center;
+}
+
+.icono_contacto a{
+	margin: 50px;
+}
+
+.icono_contacto img{
 	width: 20%;
-	heigth: auto;
-	margin: 10px;
-	float: left;
+	height: auto;
 }
 
 .textarea {
