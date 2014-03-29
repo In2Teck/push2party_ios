@@ -13,7 +13,7 @@ function success(data){
            $("#alcohol_list").append("<a href='#' id='" + item.id + "'><li class='alcohol'>"+ item.description + "</li></a>");
            if (item.children.length > 0){
               $("#"+item.id).on('click', function(){
-                modalDialogue(item.description, item.children);
+                modalDialogueCompras(item.description, item.children);
               });
            }
     });

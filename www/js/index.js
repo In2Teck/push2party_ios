@@ -153,6 +153,70 @@ function modalDialogue(title, itemArray, options){
            var value = initOrGetValue("items", key.id, key.price, key.description);
            var numero = "";
            if (value.quantity != 0){
+           numero = value.quantity;
+           }
+           $("#modal-content").append("<tr><td id='"+key.id+"' class='items'>"+key.name+"</td><td class='numbers'><input type='tel' pattern='\d*' min='0' max='99' id='"+ key.id+ "_spinner' value='"+ numero +"' size=2 maxlength=2 class='numero_input' /></td></tr>");
+           $("#"+key.id+"_spinner").spinner({
+                                            max: 99,
+                                            min: 0,
+                                            icons: { up: "none", down: "none" }
+                                            });
+           });
+    $("#modal-content").append("</table>");
+    $("#modal-content").append("<br/><p style='text-align: center;'><a href='#' class='btn_aceptar_item' id='" + title.replace(/ /g,'') + "'></a></p>");
+    $("#"+title.replace(/ /g,'')).on('click', function(){
+                                     $.each(itemArray, function(value, key){
+                                            setQuantityValue("items", key.id, $("#"+key.id+"_spinner")[0].value);
+                                            });
+                                     $('#shopping').css("background-image", "url('img/carrito_seleccionado.png')");
+                                     setTimeout(function(){
+                                                $.modal.close();
+                                                $('#shopping').css("background-image", "url('img/carrito.png')");
+                                                }, 200);
+                                     
+                                     });
+    //$("#modal-alert").css("height", "600px");
+    $("#modal-alert").modal(options);
+    $(".simplemodal-wrap").css("overflow","");
+    $(".numero_input")[0].focus();
+}
+
+function modalDialogueCompras(title, itemArray, options){
+    
+    if (options == null) {
+        options = {};
+    }
+    
+    //options["closeClass"] = "dialogueClass";
+    options["containerId"] = "simplemodalcompras-container";
+    options["minHeight"] = 300 + itemArray.length*50;
+    options["minWidth"] = 450;
+    options["onClose"] = function(){
+        var carrito = false;
+        $.each(itemArray, function(value, key){
+               setQuantityValue("items", key.id, $("#"+key.id+"_spinner")[0].value);
+               if ($("#"+key.id+"_spinner")[0].value != "" && $("#"+key.id+"_spinner")[0].value > 0){
+               carrito = true;
+               }
+        });
+        
+        if (carrito){
+            $('#shopping').css("background-image", "url('img/carrito_seleccionado.png')");
+            setTimeout(function(){
+                   $.modal.close();
+                   $('#shopping').css("background-image", "url('img/carrito.png')");
+            }, 200);
+        }else{
+            $.modal.close();
+        }
+    };
+    $("#modal-title")[0].innerHTML = title;
+    $("#modal-content").empty();
+    $("#modal-content").append("<br/><table>");
+    $.each(itemArray, function(value, key){
+           var value = initOrGetValue("items", key.id, key.price, key.description);
+           var numero = "";
+           if (value.quantity != 0){
             numero = value.quantity;
            }
            $("#modal-content").append("<tr><td id='"+key.id+"' class='items'>"+key.name+"</td><td class='numbers'><input type='tel' pattern='\d*' min='0' max='99' id='"+ key.id+ "_spinner' value='"+ numero +"' size=2 maxlength=2 class='numero_input' /></td></tr>");
@@ -162,22 +226,10 @@ function modalDialogue(title, itemArray, options){
              icons: { up: "none", down: "none" }
            });
     });
-    $("#modal-content").append("</table>");
-    $("#modal-content").append("<br/><p style='text-align: center;'><a href='#' class='btn_aceptar_item' id='" + title.replace(/ /g,'') + "'></a></p>");
-    $("#"+title.replace(/ /g,'')).on('click', function(){
-                    $.each(itemArray, function(value, key){
-                        setQuantityValue("items", key.id, $("#"+key.id+"_spinner")[0].value);
-                    });
-                    $('#shopping').css("background-image", "url('img/carrito_seleccionado.png')");
-                    setTimeout(function(){
-                      $.modal.close();
-                      $('#shopping').css("background-image", "url('img/carrito.png')");
-                    }, 200);
-                    
-    });
+    $("#modal-content").append("</table><br/>");
     //$("#modal-alert").css("height", "600px");
     $("#modal-alert").modal(options);
-    $(".simplemodal-wrap").css("overflow","");
+    $(".simplemodalcompras-wrap").css("overflow","");
     $(".numero_input")[0].focus();
 }
 

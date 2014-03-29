@@ -12,7 +12,7 @@ function success(data){
            $("#produccion_list").append("<a href='#' id='" + item.id + "'><li class='produccion'>"+ item.description + "</li></a>");
            if (item.children.length > 0){
               $("#"+item.id).on('click', function(){
-                modalDialogue(item.description, item.children);
+                modalDialogueCompras(item.description, item.children);
               });
            }
     });

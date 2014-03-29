@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face{
+  font-family: 'Labtopb';
+  src: url('../fonts/LABTOPB_.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #back {
   background: url('../img/back.png') no-repeat center;
   float: left;
@@ -142,20 +149,20 @@ nav {
 }
 
 .elementos{
-    padding-top: 2em;
+    padding-top: 2.5em;
     height: 490px;
-    margin-top:-15px;
+    margin-top:-8px;
+    line-height: .8em;
+    font-family: 'Labtopb';
 }
 
 .elementos_compress{
     padding-top: 3.2em;
-    height: 450px;
-    margin-top:-15px;
-}
-
-.elementos_compress p{
-    font-size: .9em;
-    margin: 0;
+    height: 490px;
+    margin-top:-8px;
+    line-height: .7em;
+    font-size: .8em;
+    font-family: 'Labtopb';
 }
 
 .descripcion{
@@ -268,17 +275,38 @@ h3 {
   width: 122px;
 }
 
-.icono_contacto{
+.icono_contacto {
+	display: inline-block;
+	width: 100%;
+}
+
+.icono_contacto .icon {
+	width: 50%;
+	display: block;
 	text-align: center;
 }
 
-.icono_contacto a{
-	margin: 50px;
+.icono_contacto img {
+	width: 30%;
+	height: auto;
+	margin-left: 60%;
+	margin-right: auto;
 }
 
-.icono_contacto img{
-	width: 20%;
-	height: auto;
+.icon_wa {
+    width: 35% !important;
+}
+
+.icono_contacto .link {
+	width: 50%;
+	display: block;
+	text-align: center;
+	float: right;
+}
+
+.icono_contacto .link a{
+	margin-top: -70px;
+	margin-right: 60%;
 }
 
 .textarea {
@@ -562,8 +590,18 @@ h3 {
   text-decoration: none;
 }
 
-#simplemodal-overlay {background-color:#111;}
+#simplemodalcompras-overlay {background-color:#111;}
 
+#simplemodalcompras-container {height:160px; width:200px; color:#111; background-color:#FFF; border:2px solid #444; padding:1em; font-weight: normal; border-radius: 10px;}
+#simplemodalcompras-container .simplemodal-data {padding: 0;}
+#simplemodalcompras-container code {background:#111; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:1em; margin-bottom:1em; padding:0.5em 0.5em 0.5em;}
+#simplemodalcompras-container a {color:#111;}
+#simplemodalcompras-container a.modalCloseImg {background:url("../img/btn_aceptar_item.png") no-repeat; width:121px; height:59px; z-index:3200; position:absolute; bottom: 10px; right:190px; cursor:pointer;}
+#simplemodalcompras-container p {margin: 0;}
+#simplemodalcompras-container.h1 {color:#111; margin: 0; font-size: 2em;}
+
+
+#simplemodal-overlay {background-color:#111;}
 #simplemodal-container {height:160px; width:200px; color:#111; background-color:#FFF; border:2px solid #444; padding:1em; font-weight: normal; border-radius: 10px;}
 #simplemodal-container .simplemodal-data {padding: 0;}
 #simplemodal-container code {background:#111; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:1em; margin-bottom:1em; padding:0.5em 0.5em 0.5em;}
@@ -584,9 +622,7 @@ h3 {
     background-image: url(../img/ajax-loader.gif);
     background-position: center center;
     background-repeat: no-repeat;
- 
 }
-
 
 /*for Sponsors*/
 .sponsor{
