@@ -1,4 +1,12 @@
-$(document).on('ready', init);
+$(document).on('ready', function(){
+    $.loader({className:"animated-loader", content:""});
+    init();
+});
+
+$(document).on('load', function(){
+    $("#jquery-loader-background").remove();
+    $("#jquery-loader").remove();
+});
 
 function init() {
     $("#envia_mensaje").on('click', openEmailClient);
