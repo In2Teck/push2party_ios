@@ -1,11 +1,10 @@
 $(document).on('ready', function(){
-    $.loader({className:"animated-loader", content:""});
+	$.loader({className:"animated-loader", content:""});
     init();
-});
-
-$(document).on('loadeddata', function(){
-    $("#jquery-loader-background").remove();
-    $("#jquery-loader").remove();
+	setTimeout(function() { 
+		$("#jquery-loader-background").remove();
+		$("#jquery-loader").remove(); 
+	}, 1000);
 });
 
 function init() {
