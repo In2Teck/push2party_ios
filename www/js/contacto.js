@@ -3,7 +3,7 @@ $(document).on('ready', function(){
     init();
 });
 
-$(document).on('load', function(){
+$(document).on('loadeddata', function(){
     $("#jquery-loader-background").remove();
     $("#jquery-loader").remove();
 });
