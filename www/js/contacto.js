@@ -1,10 +1,28 @@
-$(document).on('ready', function(){
-	$.loader({className:"animated-loader", content:""});
-    init();
-	setTimeout(function() { 
+var facebook;
+var twitter;
+var instagram;
+var whatsapp;
+
+function face(){facebook = true;}
+function twit(){twitter = true;}
+function insta(){instagram = true;}
+function whats(){whatsapp = true;}
+function check(){
+	var all_loaded = (facebook && twitter && instagram && whatsapp);
+	if(all_loaded){
 		$("#jquery-loader-background").remove();
-		$("#jquery-loader").remove(); 
-	}, 1000);
+		$("#jquery-loader").remove();
+	}
+}
+
+$(document).on('ready', function(){
+	facebook = false;
+	twitter = false;
+	instagram = false;
+	whatsapp = false;
+	
+	$.loader({className:"animated-loader", content:""});
+    init(); 
 });
 
 function init() {
