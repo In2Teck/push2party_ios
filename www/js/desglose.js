@@ -9,8 +9,8 @@ $(document).on('ready', function(){
             var str = '<img class="img-sponsor" src="'+img.src+'" alt="sponsor 2">';
 
 	        $(".sponsor").append(str);
-	        $(".sponsor").css('width','100%');
-	        $(".sponsor").css('heigth','100%');
+	        $(".sponsor").css('width','auto');
+	        $(".sponsor").css('heigth','auto');
 	        $(".sponsor").css('position','absolute');
 	        $(".sponsor").css('text-align','center');
             $(".sponsor").css('z-index','-10');
