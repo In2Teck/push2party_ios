@@ -8,17 +8,19 @@ $(document).on('ready', function(){
         img.onload = function() {
             var str = '<img class="img-sponsor" src="'+img.src+'" alt="sponsor 2">';
 
-	        $(".sponsor").append(str);
-	        $(".sponsor").css('width','auto');
-	        $(".sponsor").css('heigth','auto');
-	        $(".sponsor").css('position','absolute');
-	        $(".sponsor").css('text-align','center');
+            $(".sponsor").append(str);
+            $(".sponsor").css('width','100%');
+            $(".sponsor").css('heigth','100%');
+            $(".sponsor").css('position','absolute');
+            $(".sponsor").css('text-align','center');
             $(".sponsor").css('z-index','-10');
-	        $(".img-sponsor").css('margin-top','50px');
-            $(".img-sponsor").css('width','100%');
-	        $(".img-sponsor").css('heigth','auto');
-   	        $(".img-sponsor").css('opacity','.1');
-	        
+            $(".img-sponsor").css('margin-left','auto');
+            $(".img-sponsor").css('margin-right','auto');
+            $(".img-sponsor").css('margin-top','50px');
+            $(".img-sponsor").css('width','auto');
+            $(".img-sponsor").css('heigth','auto');
+            $(".img-sponsor").css('opacity','.1');
+            
             init();
         };
 	}
