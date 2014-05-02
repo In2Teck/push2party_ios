@@ -599,7 +599,7 @@ h3 {
 #simplemodalcompras-container a.modalCloseImg {background:url("../img/btn_aceptar_item.png") no-repeat; width:121px; height:59px; z-index:3200; position:absolute; bottom: 10px; right:190px; cursor:pointer;}
 #simplemodalcompras-container p {margin: 0;}
 #simplemodalcompras-container.h1 {color:#111; margin: 0; font-size: 2em;}
-
+.fake_close {background:url("../img/tache_min.png") no-repeat; width:60px; height:60px; z-index:3200; position:absolute; top: 20px; right:2px; cursor:pointer; background-position: 40% 60%;}
 
 #simplemodal-overlay {background-color:#111;}
 #simplemodal-container {height:160px; width:200px; color:#111; background-color:#FFF; border:2px solid #444; padding:1em; font-weight: normal; border-radius: 10px;}

@@ -1,5 +1,8 @@
 $(document).on('ready', function(){
 	$.loader({className:"animated-loader", content:""});
+    $("#fake_close").on('click', function(){
+        $.modal.close();
+    });
 	init();
 });
 
