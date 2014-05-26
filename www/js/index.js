@@ -189,22 +189,24 @@ function modalDialogueCompras(title, itemArray, options){
     
     //options["closeClass"] = "dialogueClass";
     options["containerId"] = "simplemodalcompras-container";
-    options["minHeight"] = 300 + itemArray.length*50;
+    options["minHeight"] = 650;
     options["minWidth"] = 450;
     options["onClose"] = function(){
         var carrito = false;
+        $("#modal-content").getNiceScroll().hide();
+        
         $.each(itemArray, function(value, key){
-               setQuantityValue("items", key.id, $("#"+key.id+"_spinner")[0].value);
-               if ($("#"+key.id+"_spinner")[0].value != "" && $("#"+key.id+"_spinner")[0].value > 0){
+            setQuantityValue("items", key.id, $("#"+key.id+"_spinner")[0].value);
+            if ($("#"+key.id+"_spinner")[0].value != "" && $("#"+key.id+"_spinner")[0].value > 0){
                carrito = true;
-               }
+            }
         });
         
         if (carrito){
             $('#shopping').css("background-image", "url('img/carrito_seleccionado.png')");
             setTimeout(function(){
-                   $.modal.close();
-                   $('#shopping').css("background-image", "url('img/carrito.png')");
+                $.modal.close();
+                $('#shopping').css("background-image", "url('img/carrito.png')");
             }, 200);
         }else{
             $.modal.close();
@@ -227,10 +229,10 @@ function modalDialogueCompras(title, itemArray, options){
            });
     });
     $("#modal-content").append("</table><br/>");
-    //$("#modal-alert").css("height", "600px");
     $("#modal-alert").modal(options);
     $(".simplemodalcompras-wrap").css("overflow","");
     $(".numero_input")[0].focus();
+    $("#modal-content").niceScroll({autohidemode:"false"});
 }
 
 function contactDialogue(title, options){
@@ -239,10 +241,11 @@ function contactDialogue(title, options){
         options = {};
     }
     //options["closeClass"] = "dialogueClass";
+    
     options["minHeight"] = 700;
     options["minWidth"] = 400;
     $("#modal-title")[0].innerHTML = title;
-    $("#modal-content").empty();
+    $("#modal-content-sc").empty();
     $("#modal-alert").modal(options);
     $(".simplemodal-wrap").css("overflow","");
     $("#name_input").focus();

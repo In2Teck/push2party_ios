@@ -318,7 +318,7 @@ h3 {
 
 .cantidad{
     text-align: right;
-    margin-right: 1em;
+    margin-right: 1.5em !important;
 }
 
 .items {
@@ -391,7 +391,7 @@ h3 {
 
 #btn_produccion{
   background: url('../img/eventos/btn_produccion.png') no-repeat center;
-  height: 62px;
+  height: 124px;
   width: 226px;
   position: absolute;
   top: 726px;
@@ -493,17 +493,35 @@ h3 {
 
 #cotizacion .h2{
   display: inline-block;
+  width: 30%;
+  height: 60px;
 }
+
+#cotizacion .h3{
+  display: inline-block;
+  font-size: 1em;
+  width: 30%;
+  height: 60px;
+}
+
 #cotizacion div{
   display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  text-align: center;
 }
 
 #articulos{
-    margin-left: 4em;
+  margin-left: 1em;
+  display: inline-block;
 }
 
 #cantidad{
-    text-align: center;
+  display: inline-block;
+}
+
+#precio_unitario{
+  display: inline-block;
 }
 
 .col {
@@ -576,6 +594,27 @@ h3 {
 	width:30%;
 }
 
+#modal-content-sc{
+
+}
+
+#modal-content-sc div {
+  background-color: rgba(3,3,3,0.3);
+  height: 10%;
+  margin: 0.5em auto;
+  width: 70%;
+}
+
+#modal-content-sc div a {
+  color: #b09648;
+  margin: 0.5em 1em;
+  text-decoration: none;
+}
+
+#modal-content{
+    height: 400px;
+    overflow: auto;
+}
 
 #modal-content div {
   background-color: rgba(3,3,3,0.3);
@@ -629,6 +668,7 @@ h3 {
 	width:100%;
 	heigth:auto;
     text-align: center;
+    display: none;
 }
 
 .sponsor img{

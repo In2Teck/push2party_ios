@@ -27,14 +27,24 @@
         
         function success(data){
             
-            var isCachedUser;
+            var isCachedUser = isCache("user");
+                        
             var img = new Image();
             img.src = data[0].image_url;
             img.onload = function() {
                 var str = '<img src="'+img.src+'" alt="sponsor 1">';
                 $(".sponsor").append(str);
-                isCachedUser = isCache("user");
-                setTimeout(function(){ window.location.href = 'menu.html';}, 2000);
+                $(".sponsor").fadeIn('slow', function(){
+                    setTimeout(function(){
+                        $(".sponsor").fadeOut('slow', function(){
+                            if (isCachedUser){
+                                window.location.href = 'menu.html';
+                            } else {
+                                window.location.href = 'splash.html';
+                            }
+                        });
+                    }, 2000);
+                });
             };
         }
         

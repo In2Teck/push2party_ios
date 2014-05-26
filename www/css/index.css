@@ -20,10 +20,23 @@ article div input{
 }
 
 #boton_aceptar {
+
+}
+
+#boton_omitir {
+
+}
+
+.boton_splash {
   border: 2px solid #BFBDBD;
   font-size: 1.6em;
   padding: .2em .8em;
+  margin-left: 1em;
   text-decoration: none;
+}
+
+#lista_genero {
+  width: 9.7em;
 }
 
 body {

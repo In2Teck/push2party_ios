@@ -54,6 +54,7 @@ function sendData(){
                 phone: $("#telefono_input")[0].value,
                 email: $("#email_input")[0].value
             }
+            
             setCache("user", user);
         }
         var orden = {
@@ -133,34 +134,32 @@ function populateItems(){
     var total = 0;
     $.each(shopping.paquetes, function(value, key){
         if (key.quantity > 0) {
-           //$("#articulos").append("<p>" + key.description + "</p>");
-           //$("#cantidad").append("<p>" + key.quantity + "</p>");
            total += key.quantity * key.price;
         }
     });
     $.each(shopping.items, function(value, key){
         if (key.quantity > 0) {
-           //$("#articulos").append("<p>" + key.description + "</p>");
-           //$("#cantidad").append("<p>" + key.quantity + "</p>");
            total += key.quantity * key.price;
         }
     });
     
     if (total >0){
-        $("#cotizacion").append("<div id='articulos'><p class='h2 col'>PRODUCTO</p></div><div id='cantidad'><p class='h2'>CANTIDAD</p></div>");
+        $("#cotizacion").append("<div id='articulos'><p class='h2 col'>PRODUCTO</p></div><div id='precio_unitario'><p class='h3'>PRECIO UNITARIO</p></div><div id='cantidad'><p class='h2'>CANTIDAD</p></div>");
         
         $.each(shopping.paquetes, function(value, key){
 	        if (key.quantity > 0) {
 	           $("#articulos").append("<p>" + key.description + "</p>");
+               $("#precio_unitario").append("<p>" + key.price + "</p>");
 	           $("#cantidad").append("<p>" + key.quantity + "</p>");
-	           total += key.quantity * key.price;
+	           //total += key.quantity * key.price;
 	        }
 	    });
 	    $.each(shopping.items, function(value, key){
 	        if (key.quantity > 0) {
 	           $("#articulos").append("<p>" + key.description + "</p>");
+               $("#precio_unitario").append("<p>" + key.price + "</p>");
 	           $("#cantidad").append("<p>" + key.quantity + "</p>");
-	           total += key.quantity * key.price;
+	           //total += key.quantity * key.price;
 	        }
 	    });
 	    

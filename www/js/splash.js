@@ -2,17 +2,26 @@ $(document).on('ready', init);
 
 function init() {
     $("#boton_aceptar").on('click', addUser);
+    $("#boton_omitir").on('click', skip);
     setTimeout(checkConnection, 500);
+}
+
+function skip(){
+    window.location.href = 'menu.html';
 }
 
 function addUser(){
     var verified = verifyFields();
+    
     if (verified.status){
+        var idx = $("#lista_genero")[0].selectedIndex;
+        var content = $("#lista_genero")[0].options[idx].innerHTML;
+        
         var user = {
             firstname: $("#nombre")[0].value,
-            lastname: $("#apellido")[0].value,
             phone: $("#telefono")[0].value,
-            email: $("#mail")[0].value
+            email: $("#email")[0].value,
+            gender: content
         }
         requestService(HOST + "users.json", "POST", {user: user}, success, fail);
     } else {
@@ -32,8 +41,8 @@ function fail(error){
 function verifyFields(){
     var result = {};
     
-    if ($("#nombre")[0].value != "" && $("#apellido")[0].value != "" && $("#telefono")[0].value != "" && $("#mail")[0].value != "") {
-        if ( !validateEmail($("#mail")[0].value) ){
+    if ($("#nombre")[0].value != "" && $("#telefono")[0].value != "" && $("#email")[0].value != "") {
+        if ( !validateEmail($("#email")[0].value) ){
             result["status"] = false;
             result["message"] = "El email proporcionado no es válido";
         } else if (!validatePhone($("#telefono")[0].value)) {

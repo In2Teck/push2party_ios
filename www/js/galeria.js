@@ -15,7 +15,6 @@ function success(data){
            });
            lugarStr += "</article>";
            $("#gallery_images").append(lugarStr);
-           
     });
     $("a[rel^='prettyPhoto']").prettyPhoto({show_title: false, theme:'light_square', social_tools: false});
     $("#jquery-loader-background").remove();

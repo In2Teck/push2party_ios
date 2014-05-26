@@ -7,9 +7,9 @@ $(document).on('ready', function(){
 });
 
 function init() {
+
     requestService(HOST + "items/by_parent_id_with_children.json", "GET", {parent_id: 1}, success, fail);
 }
-
 
 function success(data){
     $.each( data, function( i, item ) {

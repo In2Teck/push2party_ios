@@ -24,15 +24,21 @@
             requestService(HOST + "sponsors.json", "GET", null, success, null);
             
         };
-        
+    
         function success(data){
-            
+        
             var img = new Image();
             img.src = data[2].image_url;
             img.onload = function() {
                 var str = '<img src="'+img.src+'" alt="sponsor 2">';
                 $(".sponsor").append(str);
-                setTimeout(function(){ window.location.href = 'menu.html';}, 2000);
+                $(".sponsor").fadeIn('slow', function(){
+                    setTimeout(function(){
+                        $(".sponsor").fadeOut('slow', function(){
+                            window.location.href = 'menu.html';
+                        });
+                    }, 2000);
+                });
             };
         }
         
