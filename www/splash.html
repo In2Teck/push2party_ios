@@ -18,29 +18,33 @@
   </head>
     <body>
       <header>
-        <img src="img/texto_logo.png" alt="texto_logo"/>
+        <img src="img/texto_logo.png" alt="texto_logo" id="logo_splash"/>
       </header>
       <section>
         <article>
-          <p id='instrucciones'>Al registrarte, aceptas los <a href='#'>términos y condiciones</a> y la política de privacidad de Push2party.</p>
+          <p id='instrucciones'>Al registrarte, aceptas los <a href="" onclick="window.open('http://push2party.herokuapp.com/privacidad.html', '_system', 'location=yes');">términos y condiciones</a> y la política de privacidad de Push2party.</p>
           <div>
-            <label>NOMBRE</label>
-            <input id="nombre"></input>
+            <label class='label'>NOMBRE</label>
+            <input id="nombre" height="10"></input>
           </div>
           <div>
-            <label>TELEFONO</label>
+            <label class='label'>TELEFONO</label>
             <input id="telefono"></input>
           </div> 
           <div>
-            <label>E-MAIL</label>
+            <label class='label'>E-MAIL</label>
             <input id="email"></input>
           </div>
           <div>
-              <label>GÉNERO</label>
-              <select name="lista_genero" id="lista_genero">
+              <label class='label'>GÉNERO</label>
+              <select name="lista_genero" id="lista_genero" class='selects'>
                   <option>masculino</option>
                   <option>femenino</option>
               </select>
+          </div>
+          <div>
+            <label class='label'>FECHA DE NACIMIENTO</label>
+            <input type='date' id='fecha_input' value="1990-01-01"></input>
           </div>
           <br/>
           <div class="centrado_horizontal">

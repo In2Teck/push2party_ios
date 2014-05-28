@@ -1,32 +1,33 @@
+var backHistory;
+function successSponsor(data){
+    var img = new Image();
+    img.src = data[1].image_url;
+    img.onload = function() {
+        var str = '<img class="img-sponsor" src="'+img.src+'" alt="sponsor 2">';
+        
+        $(".sponsor").append(str);
+        $(".sponsor").css('width','100%');
+        $(".sponsor").css('heigth','100%');
+        $(".sponsor").css('position','absolute');
+        $(".sponsor").css('text-align','center');
+        $(".sponsor").css('z-index','-10');
+        $(".img-sponsor").css('margin-left','auto');
+        $(".img-sponsor").css('margin-right','auto');
+        $(".img-sponsor").css('margin-top','50px');
+        $(".img-sponsor").css('width','auto');
+        $(".img-sponsor").css('heigth','auto');
+        $(".img-sponsor").css('opacity','.1');
+        
+        init();
+    };
+}
+
 $(document).on('ready', function(){
 	$.loader({className:"animated-loader", content:""});
 	
-	requestService(HOST + "sponsors.json", "GET", null, success, null);
-	function success(data){
-		var img = new Image();
-        img.src = data[1].image_url;
-        img.onload = function() {
-            var str = '<img class="img-sponsor" src="'+img.src+'" alt="sponsor 2">';
-
-            $(".sponsor").append(str);
-            $(".sponsor").css('width','100%');
-            $(".sponsor").css('heigth','100%');
-            $(".sponsor").css('position','absolute');
-            $(".sponsor").css('text-align','center');
-            $(".sponsor").css('z-index','-10');
-            $(".img-sponsor").css('margin-left','auto');
-            $(".img-sponsor").css('margin-right','auto');
-            $(".img-sponsor").css('margin-top','50px');
-            $(".img-sponsor").css('width','auto');
-            $(".img-sponsor").css('heigth','auto');
-            $(".img-sponsor").css('opacity','.1');
-            
-            init();
-        };
-	}
+	requestService(HOST + "sponsors.json", "GET", null, successSponsor, fail);
+               
 });
-var backHistory;
-
 
 function init() {
     $("#btn_enviar").on('click', sendData);

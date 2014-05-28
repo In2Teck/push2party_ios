@@ -21,7 +21,8 @@ function addUser(){
             firstname: $("#nombre")[0].value,
             phone: $("#telefono")[0].value,
             email: $("#email")[0].value,
-            gender: content
+            gender: content,
+            dob: $("#fecha_input")
         }
         requestService(HOST + "users.json", "POST", {user: user}, success, fail);
     } else {
@@ -48,7 +49,10 @@ function verifyFields(){
         } else if (!validatePhone($("#telefono")[0].value)) {
             result["status"] = false;
             result["message"] = "El teléfono proporcionado debe contener mínimo 8 números.";
-        } else {
+        } else if (!validateDate($("#fecha_input")[0].value)) {
+            result["status"] = false;
+            result["message"] = "La fecha no es válida.";
+        }else {
             result["status"] = true;
         }
     } else {
